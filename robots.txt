@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /descargas/
-
-Sitemap: https://plantillafactura.vercel.app/sitemap.xml
