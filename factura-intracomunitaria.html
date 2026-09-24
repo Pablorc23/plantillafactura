@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantilla de Factura Intracomunitaria (Excel y PDF) | PlantillaFactura</title>
+<meta name="description" content="Plantilla gratuita de factura para operaciones intracomunitarias entre autónomos y empresas de la UE, con inversión del sujeto pasivo y sin IVA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://plantillafacturacion.es/factura-intracomunitaria.html">
+<style>
+  :root{--bg:#EDEBE3;--surface:#FFFFFF;--ink:#1E2A38;--ink-soft:#5B6472;--accent:#2F6F62;--line:#D8D3C5;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.65;}
+  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;margin:1.8em 0 .5em;color:var(--ink);}
+  h1{margin-top:0;}
+  a{color:var(--accent);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
+  header{border-bottom:1px solid var(--line);}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;max-width:960px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;}
+  .brand span{color:var(--accent);}
+  .nav a{margin-left:1.5rem;color:var(--ink-soft);text-decoration:none;font-size:.95rem;}
+  article{padding:3rem 0 4rem;}
+  h1{font-size:2rem;max-width:24ch;line-height:1.2;}
+  .lede{color:var(--ink-soft);font-size:1.05rem;max-width:56ch;}
+  .download-box{background:var(--surface);border:1px solid var(--line);padding:1.5rem;margin:2rem 0;}
+  .download-box p{margin:0 0 1rem;color:var(--ink-soft);font-size:.9rem;}
+  .btn-row{display:flex;gap:.75rem;flex-wrap:wrap;}
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:.7rem 1.3rem;text-decoration:none;font-weight:500;font-size:.95rem;}
+  .btn.alt{background:transparent;border:1px solid var(--ink);color:var(--ink);}
+  .req-list{list-style:none;margin:1.5rem 0;padding:0;border-top:1px solid var(--line);}
+  .req-list li{border-bottom:1px solid var(--line);padding:.9rem 0;display:flex;gap:1rem;}
+  .req-list b{min-width:13rem;flex-shrink:0;}
+  .req-list span{color:var(--ink-soft);}
+  .faq dt{font-weight:600;margin-top:1.3rem;}
+  .faq dd{margin:.3rem 0 0;color:var(--ink-soft);}
+  footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;max-width:960px;}
+  footer a{color:var(--ink-soft);text-decoration:none;margin-right:1rem;}
+  @media (max-width:680px){.req-list li{flex-direction:column;gap:.2rem;}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">Plantilla<span>Factura</span></div><nav><a href="index.html">Inicio</a><a href="blog/index.html">Blog</a><a href="contacto.html">Contacto</a></nav></div></header>
+
+<article class="wrap">
+  <h1>Plantilla de factura para operaciones intracomunitarias</h1>
+  <p class="lede">Para cuando facturas a una empresa o autónomo de otro país de la Unión Europea: sin IVA, con inversión del sujeto pasivo y la mención legal obligatoria.</p>
+
+  <div class="download-box">
+    <p>Formato Excel (.xlsx) con fórmulas activas, y formato PDF listo para imprimir o enviar por correo.</p>
+    <div class="btn-row">
+      <a href="descargas/Plantilla-Factura-Intracomunitaria.xlsx" class="btn" download>Descargar en Excel</a>
+      <a href="descargas/Plantilla-Factura-Intracomunitaria.pdf" class="btn alt" download>Descargar en PDF</a>
+    </div>
+  </div>
+
+  <h2>Requisitos para que sea una operación intracomunitaria</h2>
+  <ul class="req-list">
+    <li><b>Estar inscrito en el ROI</b><span>Tanto tú como tu cliente debéis figurar en el Registro de Operadores Intracomunitarios (ROI) y tener NIF-IVA (VIES).</span></li>
+    <li><b>Cliente en otro país de la UE</b><span>El cliente debe ser una empresa o profesional (no un particular) establecido en otro estado miembro.</span></li>
+    <li><b>Verificar el NIF-IVA</b><span>Conviene comprobar el NIF-IVA del cliente en el censo VIES antes de emitir la factura.</span></li>
+  </ul>
+
+  <h2>Cómo se factura: sin IVA</h2>
+  <p>En estas operaciones no se repercute IVA español. En su lugar, se aplica la <strong>inversión del sujeto pasivo</strong>: es el cliente, en su propio país, quien autoliquida el IVA correspondiente según su normativa local. Tu factura debe incluir una mención expresa a esto, por ejemplo:</p>
+  <p style="background:var(--surface);border:1px solid var(--line);padding:1rem;font-size:.92rem;color:var(--ink-soft);">"Operación exenta de IVA por aplicación del artículo 25 de la Ley 37/1992. Inversión del sujeto pasivo."</p>
+
+  <h2>Qué debe llevar además de lo habitual</h2>
+  <ul class="req-list">
+    <li><b>Tu NIF-IVA</b><span>Con el prefijo ES delante (ej. ESX12345678).</span></li>
+    <li><b>NIF-IVA del cliente</b><span>Con el prefijo de su país (ej. FR, DE, IT...).</span></li>
+    <li><b>Mención de exención</b><span>La referencia legal a la inversión del sujeto pasivo, como en el ejemplo de arriba.</span></li>
+  </ul>
+
+  <p>Además, estas operaciones se declaran en el <strong>modelo 349</strong> (declaración recapitulativa de operaciones intracomunitarias), independientemente de tu declaración trimestral de IVA habitual.</p>
+</article>
+
+<footer><div class="wrap"><div>© 2026 PlantillaFactura</div><div><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="contacto.html">Contacto</a></div></div></footer>
+</body>
+</html>
