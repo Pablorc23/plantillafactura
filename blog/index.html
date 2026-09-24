@@ -26,11 +26,20 @@
   .hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line);}
   .hero h1{font-size:2.2rem;}
   .hero p{color:var(--ink-soft);max-width:52ch;}
-  .posts{padding:3rem 0 4rem;display:grid;gap:1.5rem;}
-  .post{background:var(--surface);border:1px solid var(--line);padding:1.6rem;text-decoration:none;display:block;}
-  .post h2{font-size:1.25rem;margin:.2rem 0 .5rem;color:var(--ink);}
-  .post p{color:var(--ink-soft);margin:0;font-size:.95rem;}
-  .post .kicker{color:var(--accent);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+
+  .featured{margin:3rem 0 1.5rem;background:var(--surface);border:1px solid var(--line);padding:2rem;text-decoration:none;display:block;}
+  .featured .kicker{color:var(--accent);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+  .featured h2{font-size:1.6rem;margin:.5rem 0 .6rem;}
+  .featured p{color:var(--ink-soft);margin:0 0 .9rem;max-width:60ch;}
+  .meta{color:var(--ink-soft);font-size:.82rem;}
+  .meta span:not(:last-child)::after{content:"·";margin:0 .5rem;}
+
+  .posts{padding-bottom:4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+  .post{background:var(--surface);border:1px solid var(--line);padding:1.4rem;text-decoration:none;display:block;}
+  .post h3{font-size:1.05rem;margin:.4rem 0 .5rem;color:var(--ink);font-weight:600;}
+  .post p{color:var(--ink-soft);margin:0 0 .7rem;font-size:.9rem;}
+  .post .kicker{color:var(--accent);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+
   footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
   footer a{color:var(--ink-soft);text-decoration:none;margin-right:1rem;}
@@ -54,77 +63,96 @@
   <p>Todo lo que necesitas saber para facturar bien a la primera: IVA, IRPF, rectificativas y buenas prácticas, explicado sin jerga.</p>
 </div>
 
-<div class="posts wrap">
-  <a class="post" href="como-hacer-una-factura-autonomo.html">
-    <span class="kicker">Guía completa</span>
+<div class="wrap">
+
+  <a class="featured" href="como-hacer-una-factura-autonomo.html">
+    <span class="kicker">Destacado · Guía completa</span>
     <h2>Cómo hacer una factura siendo autónomo en 2026</h2>
     <p>Campos obligatorios, numeración, cálculo de IVA e IRPF y errores que debes evitar.</p>
+    <div class="meta"><span>23 sept 2026</span><span>5 min de lectura</span></div>
   </a>
-  <a class="post" href="factura-rectificativa-cuando-emitirla.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Factura rectificativa: cuándo y cómo emitirla</h2>
-    <p>Qué diferencia hay con un abono, qué datos debe incluir y cómo numerarla correctamente.</p>
-  </a>
-  <a class="post" href="iva-irpf-facturas-autonomos.html">
-    <span class="kicker">Guía completa</span>
-    <h2>IVA e IRPF en las facturas de autónomos</h2>
-    <p>Tabla de tipos de IVA, retenciones de IRPF y un ejemplo de cálculo paso a paso.</p>
-  </a>
-  <a class="post" href="como-darse-de-alta-autonomo.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Cómo darte de alta como autónomo paso a paso</h2>
-    <p>Trámites en Hacienda y Seguridad Social, documentos y errores habituales al empezar.</p>
-  </a>
-  <a class="post" href="gastos-deducibles-autonomos.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Gastos deducibles para autónomos: lista completa</h2>
-    <p>Qué gastos puedes deducirte, cuáles son polémicos y qué exige Hacienda para admitirlos.</p>
-  </a>
-  <a class="post" href="factura-simplificada-vs-completa.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Factura simplificada vs factura completa</h2>
-    <p>Diferencias, límites de importe y cuándo el cliente puede exigirte una factura completa.</p>
-  </a>
-  <a class="post" href="factura-electronica-obligatoria-verifactu.html">
-    <span class="kicker">Novedad normativa</span>
-    <h2>Factura electrónica obligatoria: qué es Verifactu</h2>
-    <p>A quién afecta, desde cuándo y qué debes hacer si facturas con Excel.</p>
-  </a>
-  <a class="post" href="cobrar-facturas-impagadas-pasos.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Cómo cobrar una factura impagada</h2>
-    <p>Pasos antes de ir a juicio: burofax, intereses de demora y procedimiento monitorio.</p>
-  </a>
-  <a class="post" href="modelo-130-131-pagos-fraccionados.html">
-    <span class="kicker">Impuestos</span>
-    <h2>Modelo 130 y 131: pagos fraccionados</h2>
-    <p>Diferencias, quién debe presentarlos y los plazos trimestrales.</p>
-  </a>
-  <a class="post" href="autonomo-societario-diferencias.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Autónomo societario: qué es</h2>
-    <p>En qué se diferencia del autónomo persona física y cuándo estás obligado.</p>
-  </a>
-  <a class="post" href="facturar-clientes-extranjeros-ue.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Facturar a clientes extranjeros: UE y fuera de la UE</h2>
-    <p>IVA, inversión del sujeto pasivo, modelo 349 y exportación de servicios.</p>
-  </a>
-  <a class="post" href="recargo-equivalencia-que-es.html">
-    <span class="kicker">Impuestos</span>
-    <h2>Recargo de equivalencia: qué es</h2>
-    <p>A quién afecta, porcentajes y ventajas e inconvenientes.</p>
-  </a>
-  <a class="post" href="factura-proforma-para-que-sirve.html">
-    <span class="kicker">Guía completa</span>
-    <h2>Factura proforma: qué es y para qué sirve</h2>
-    <p>Diferencias con una factura real y qué datos debe incluir.</p>
-  </a>
-  <a class="post" href="errores-comunes-facturar-sanciones.html">
-    <span class="kicker">Guía completa</span>
-    <h2>8 errores al facturar que pueden costarte una sanción</h2>
-    <p>Los fallos más comunes y cómo evitarlos desde tu primera factura.</p>
-  </a>
+
+  <div class="posts">
+    <a class="post" href="factura-rectificativa-cuando-emitirla.html">
+      <span class="kicker">Legal</span>
+      <h3>Factura rectificativa: cuándo y cómo emitirla</h3>
+      <p>Qué diferencia hay con un abono, qué datos debe incluir y cómo numerarla correctamente.</p>
+      <div class="meta"><span>4 min de lectura</span></div>
+    </a>
+    <a class="post" href="iva-irpf-facturas-autonomos.html">
+      <span class="kicker">Fiscalidad</span>
+      <h3>IVA e IRPF en las facturas de autónomos</h3>
+      <p>Tabla de tipos de IVA, retenciones de IRPF y un ejemplo de cálculo paso a paso.</p>
+      <div class="meta"><span>3 min de lectura</span></div>
+    </a>
+    <a class="post" href="como-darse-de-alta-autonomo.html">
+      <span class="kicker">Trámites</span>
+      <h3>Cómo darte de alta como autónomo paso a paso</h3>
+      <p>Trámites en Hacienda y Seguridad Social, documentos y errores habituales al empezar.</p>
+      <div class="meta"><span>5 min de lectura</span></div>
+    </a>
+    <a class="post" href="gastos-deducibles-autonomos.html">
+      <span class="kicker">Fiscalidad</span>
+      <h3>Gastos deducibles para autónomos: lista completa</h3>
+      <p>Qué gastos puedes deducirte, cuáles son polémicos y qué exige Hacienda para admitirlos.</p>
+      <div class="meta"><span>4 min de lectura</span></div>
+    </a>
+    <a class="post" href="factura-simplificada-vs-completa.html">
+      <span class="kicker">Legal</span>
+      <h3>Factura simplificada vs factura completa</h3>
+      <p>Diferencias, límites de importe y cuándo el cliente puede exigirte una factura completa.</p>
+      <div class="meta"><span>4 min de lectura</span></div>
+    </a>
+    <a class="post" href="factura-electronica-obligatoria-verifactu.html">
+      <span class="kicker">Normativa</span>
+      <h3>Factura electrónica obligatoria: qué es Verifactu</h3>
+      <p>A quién afecta, desde cuándo y qué debes hacer si facturas con Excel.</p>
+      <div class="meta"><span>4 min de lectura</span></div>
+    </a>
+    <a class="post" href="cobrar-facturas-impagadas-pasos.html">
+      <span class="kicker">Cobros</span>
+      <h3>Cómo cobrar una factura impagada</h3>
+      <p>Pasos antes de ir a juicio: burofax, intereses de demora y procedimiento monitorio.</p>
+      <div class="meta"><span>3 min de lectura</span></div>
+    </a>
+    <a class="post" href="modelo-130-131-pagos-fraccionados.html">
+      <span class="kicker">Impuestos</span>
+      <h3>Modelo 130 y 131: pagos fraccionados</h3>
+      <p>Diferencias, quién debe presentarlos y los plazos trimestrales.</p>
+      <div class="meta"><span>3 min de lectura</span></div>
+    </a>
+    <a class="post" href="autonomo-societario-diferencias.html">
+      <span class="kicker">Trámites</span>
+      <h3>Autónomo societario: qué es</h3>
+      <p>En qué se diferencia del autónomo persona física y cuándo estás obligado.</p>
+      <div class="meta"><span>3 min de lectura</span></div>
+    </a>
+    <a class="post" href="facturar-clientes-extranjeros-ue.html">
+      <span class="kicker">Internacional</span>
+      <h3>Facturar a clientes extranjeros: UE y fuera de la UE</h3>
+      <p>IVA, inversión del sujeto pasivo, modelo 349 y exportación de servicios.</p>
+      <div class="meta"><span>4 min de lectura</span></div>
+    </a>
+    <a class="post" href="recargo-equivalencia-que-es.html">
+      <span class="kicker">Impuestos</span>
+      <h3>Recargo de equivalencia: qué es</h3>
+      <p>A quién afecta, porcentajes y ventajas e inconvenientes.</p>
+      <div class="meta"><span>3 min de lectura</span></div>
+    </a>
+    <a class="post" href="factura-proforma-para-que-sirve.html">
+      <span class="kicker">Legal</span>
+      <h3>Factura proforma: qué es y para qué sirve</h3>
+      <p>Diferencias con una factura real y qué datos debe incluir.</p>
+      <div class="meta"><span>3 min de lectura</span></div>
+    </a>
+    <a class="post" href="errores-comunes-facturar-sanciones.html">
+      <span class="kicker">Legal</span>
+      <h3>8 errores al facturar que pueden costarte una sanción</h3>
+      <p>Los fallos más comunes y cómo evitarlos desde tu primera factura.</p>
+      <div class="meta"><span>4 min de lectura</span></div>
+    </a>
+  </div>
+
 </div>
 
 <footer>
