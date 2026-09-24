@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantilla de Factura para Autónomos en Régimen de Módulos (Excel y PDF) | PlantillaFactura</title>
+<meta name="description" content="Plantilla gratuita de factura para autónomos en régimen de módulos (estimación objetiva): qué la diferencia de una factura normal y cómo rellenarla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://plantillafacturacion.es/factura-modulos.html">
+<style>
+  :root{--bg:#EDEBE3;--surface:#FFFFFF;--ink:#1E2A38;--ink-soft:#5B6472;--accent:#2F6F62;--line:#D8D3C5;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.65;}
+  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;margin:1.8em 0 .5em;color:var(--ink);}
+  h1{margin-top:0;}
+  a{color:var(--accent);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
+  header{border-bottom:1px solid var(--line);}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;max-width:960px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;}
+  .brand span{color:var(--accent);}
+  .nav a{margin-left:1.5rem;color:var(--ink-soft);text-decoration:none;font-size:.95rem;}
+  article{padding:3rem 0 4rem;}
+  h1{font-size:2rem;max-width:24ch;line-height:1.2;}
+  .lede{color:var(--ink-soft);font-size:1.05rem;max-width:56ch;}
+  .download-box{background:var(--surface);border:1px solid var(--line);padding:1.5rem;margin:2rem 0;}
+  .download-box p{margin:0 0 1rem;color:var(--ink-soft);font-size:.9rem;}
+  .btn-row{display:flex;gap:.75rem;flex-wrap:wrap;}
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:.7rem 1.3rem;text-decoration:none;font-weight:500;font-size:.95rem;}
+  .btn.alt{background:transparent;border:1px solid var(--ink);color:var(--ink);}
+  .req-list{list-style:none;margin:1.5rem 0;padding:0;border-top:1px solid var(--line);}
+  .req-list li{border-bottom:1px solid var(--line);padding:.9rem 0;display:flex;gap:1rem;}
+  .req-list b{min-width:13rem;flex-shrink:0;}
+  .req-list span{color:var(--ink-soft);}
+  table.rate{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.92rem;}
+  table.rate th,table.rate td{border-bottom:1px solid var(--line);padding:.6rem .3rem;text-align:left;}
+  table.rate th{color:var(--ink-soft);font-weight:500;}
+  .faq dt{font-weight:600;margin-top:1.3rem;}
+  .faq dd{margin:.3rem 0 0;color:var(--ink-soft);}
+  footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;max-width:960px;}
+  footer a{color:var(--ink-soft);text-decoration:none;margin-right:1rem;}
+  @media (max-width:680px){.req-list li{flex-direction:column;gap:.2rem;}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">Plantilla<span>Factura</span></div><nav><a href="index.html">Inicio</a><a href="blog/index.html">Blog</a><a href="contacto.html">Contacto</a></nav></div></header>
+
+<article class="wrap">
+  <h1>Plantilla de factura para autónomos en régimen de módulos</h1>
+  <p class="lede">Adaptada a la estimación objetiva (módulos): sin retención de IRPF en la mayoría de los casos, y con el recargo de equivalencia contemplado si te aplica.</p>
+
+  <div class="download-box">
+    <p>Formato Excel (.xlsx) con fórmulas activas, y formato PDF listo para imprimir o enviar por correo.</p>
+    <div class="btn-row">
+      <a href="descargas/Plantilla-Factura-Modulos.xlsx" class="btn" download>Descargar en Excel</a>
+      <a href="descargas/Plantilla-Factura-Modulos.pdf" class="btn alt" download>Descargar en PDF</a>
+    </div>
+  </div>
+
+  <h2>En qué se diferencia de una factura normal</h2>
+  <p>Un autónomo en régimen de módulos (estimación objetiva) tributa según unos parámetros fijos de su actividad (metros del local, personal, potencia eléctrica...), no según el beneficio real. Esto afecta a cómo se factura:</p>
+  <ul class="req-list">
+    <li><b>Sin retención de IRPF</b><span>Por norma general, las facturas de actividades en módulos no llevan retención de IRPF, a diferencia de estimación directa.</span></li>
+    <li><b>IVA igual que siempre</b><span>El IVA se sigue aplicando con normalidad según el tipo de la actividad (21%, 10% o 4%).</span></li>
+    <li><b>Recargo de equivalencia</b><span>Si tu actividad está en recargo de equivalencia (típico en comercio minorista), tu proveedor te lo aplicará a ti; tú no lo repercutes en tus propias facturas de venta al por menor.</span></li>
+    <li><b>Numeración correlativa</b><span>Igual que en cualquier régimen: sin saltos, sin reutilizar números.</span></li>
+  </ul>
+
+  <h2>Actividades habituales en módulos</h2>
+  <p>El régimen de módulos está pensado para actividades con ingresos y estructura relativamente predecibles: bares y restaurantes, peluquerías, autoescuelas, transporte de mercancías, comercio al por menor de ciertos productos, entre otras — siempre que no se superen los límites de facturación y empleados establecidos cada año por Hacienda.</p>
+
+  <table class="rate">
+    <tr><th>Concepto</th><th>En módulos</th><th>En estimación directa</th></tr>
+    <tr><td>Base de tributación</td><td>Parámetros fijos (módulos)</td><td>Ingresos reales − gastos</td></tr>
+    <tr><td>Retención IRPF en factura</td><td>Normalmente no</td><td>Sí, 15% o 7%</td></tr>
+    <tr><td>IVA en factura</td><td>Sí, tipo habitual</td><td>Sí, tipo habitual</td></tr>
+  </table>
+
+  <dl class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <dt>¿Nunca llevan retención las facturas en módulos?</dt>
+    <dd>Como regla general no, salvo algunas actividades concretas (como ciertas actividades de transporte o auxiliares del comercio al por menor) que sí están sujetas a retención. Consulta tu epígrafe si tienes dudas.</dd>
+    <dt>¿Puedo usar esta plantilla si además emito facturas a particulares?</dt>
+    <dd>Sí, el formato de la factura no cambia según quién sea el cliente, solo si aplica o no la retención según tu actividad.</dd>
+  </dl>
+</article>
+
+<footer><div class="wrap"><div>© 2026 PlantillaFactura</div><div><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="contacto.html">Contacto</a></div></div></footer>
+</body>
+</html>
