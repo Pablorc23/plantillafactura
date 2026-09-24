@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /descargas/
 
-Sitemap: https://plantillafactura.vercel.app/sitemap.xml
+Sitemap: https://plantillafacturacion.es/sitemap.xml
