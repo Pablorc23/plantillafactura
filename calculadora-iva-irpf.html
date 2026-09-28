@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745430115772287" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calculadora de factura para autónomos: IVA e IRPF online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de factura para autónomos: IVA e IRPF online | PlantillaFactura</title>
 <meta name="description" content="Calcula el total de tu factura de autónomo: suma el IVA, resta la retención de IRPF y obtén el importe a cobrar. También al revés, desde el total hasta la base imponible.">
 <link rel="canonical" href="https://plantillafacturacion.es/calculadora-iva-irpf.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="Calculadora de factura para autónomos: IVA e IRPF online">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://plantillafacturacion.es/calculadora-iva-irpf.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -19,136 +27,94 @@
 }
 </script>
 <style>
-:root {
-  --crema: #f6f2e8;
-  --papel: #fffdf8;
-  --verde: #4a6b57;
-  --verde-oscuro: #2f4a3a;
-  --verde-suave: #e3ebe4;
-  --tinta: #26302a;
-  --gris: #6b736d;
-  --linea: #d9d3c2;
-  --aviso: #8a5a1c;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--crema);
-  color: var(--tinta);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
-}
-a { color: var(--verde-oscuro); }
-:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
+  :root{--bg:#EDEBE3;--surface:#FFFFFF;--ink:#1E2A38;--ink-soft:#5B6472;--accent:#2F6F62;--line:#D8D3C5;--accent-soft:#E1ECE8;--warn:#8A5A1C;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.65;}
+  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;color:var(--ink);}
+  a{color:var(--accent);}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
 
-.cabecera { border-bottom: 1px solid var(--linea); background: var(--papel); }
-.cabecera div {
-  max-width: 980px; margin: 0 auto; padding: 14px 20px;
-  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
-}
-.marca { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 1.1rem; color: var(--verde-oscuro); text-decoration: none; }
-.cabecera nav a { margin-left: 18px; font-size: .95rem; text-decoration: none; }
-.cabecera nav a:hover { text-decoration: underline; }
+  header{border-bottom:1px solid var(--line);}
+  .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.4rem;padding:1.1rem 0;max-width:960px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;text-decoration:none;color:var(--ink);}
+  .brand span{color:var(--accent);}
+  .nav a{margin-left:1.5rem;color:var(--ink-soft);text-decoration:none;font-size:.95rem;}
+  .nav a:hover,.nav a[aria-current="page"]{color:var(--accent);}
 
-main { max-width: 980px; margin: 0 auto; padding: 36px 20px 60px; }
-h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
-  line-height: 1.15; margin: 0 0 12px; color: var(--verde-oscuro);
-}
-.intro { max-width: 62ch; color: var(--gris); margin: 0 0 28px; font-size: 1.05rem; }
+  main{max-width:960px;margin:0 auto;padding:3rem 1.5rem 3rem;}
+  h1{font-size:2.3rem;line-height:1.2;margin:0 0 .6rem;}
+  .intro{max-width:62ch;color:var(--ink-soft);margin:0 0 2rem;font-size:1.05rem;}
 
-.herramienta {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
-  background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; overflow: hidden;
-}
-.entrada { padding: 26px; border-right: 1px solid var(--linea); }
-.salida { padding: 26px; background: var(--verde-suave); }
+  .herramienta{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);border:1px solid var(--line);}
+  .entrada{padding:1.6rem;border-right:1px solid var(--line);}
+  .salida{padding:1.6rem;background:var(--accent-soft);}
 
-.modo { display: flex; border: 1px solid var(--verde); border-radius: 8px; overflow: hidden; margin-bottom: 22px; }
-.modo button {
-  flex: 1; padding: 10px 8px; border: 0; background: transparent; cursor: pointer;
-  font: inherit; font-size: .92rem; color: var(--verde-oscuro);
-}
-.modo button[aria-pressed="true"] { background: var(--verde); color: #fff; font-weight: 600; }
+  .modo{display:flex;border:1px solid var(--accent);margin-bottom:1.4rem;}
+  .modo button{flex:1;padding:.65rem .5rem;border:0;background:transparent;cursor:pointer;font:inherit;font-size:.92rem;color:var(--accent);}
+  .modo button[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:600;}
 
-label, .etiqueta { display: block; font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
-.campo { margin-bottom: 18px; }
-.importe { position: relative; }
-.importe input { padding-right: 38px; }
-.importe span { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--gris); pointer-events: none; }
-input[type="number"], select {
-  width: 100%; padding: 11px 12px; font: inherit; font-size: 1.05rem;
-  border: 1px solid var(--linea); border-radius: 8px; background: #fff; color: var(--tinta);
-}
-input[type="number"]:focus, select:focus { border-color: var(--verde); }
+  label,.etiqueta{display:block;font-weight:600;font-size:.95rem;margin-bottom:6px;}
+  .campo{margin-bottom:1.2rem;}
+  .importe{position:relative;}
+  .importe input{padding-right:38px;}
+  .importe span{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--ink-soft);pointer-events:none;}
+  input[type="number"],select{width:100%;padding:.7rem .75rem;font:inherit;font-size:1.05rem;border:1px solid var(--line);background:#fff;color:var(--ink);}
+  input[type="number"]:focus,select:focus{border-color:var(--accent);}
 
-.opciones { display: flex; flex-wrap: wrap; gap: 8px; }
-.opciones label {
-  margin: 0; font-weight: 500; cursor: pointer;
-  border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px; background: #fff; font-size: .93rem;
-}
-.opciones input { position: absolute; opacity: 0; pointer-events: none; }
-.opciones input:checked + span { color: #fff; }
-.opciones label:has(input:checked) { background: var(--verde); border-color: var(--verde); color: #fff; }
-.opciones label:has(input:focus-visible) { outline: 3px solid var(--verde); outline-offset: 2px; }
-.pista { font-size: .85rem; color: var(--gris); margin: 8px 0 0; }
-#otroIrpf { margin-top: 10px; display: none; }
+  .opciones{display:flex;flex-wrap:wrap;gap:8px;}
+  .opciones label{margin:0;font-weight:500;cursor:pointer;border:1px solid var(--line);padding:.45rem .9rem;background:#fff;font-size:.93rem;}
+  .opciones input{position:absolute;opacity:0;pointer-events:none;}
+  .opciones input:checked + span{color:#fff;}
+  .opciones label:has(input:checked){background:var(--accent);border-color:var(--accent);color:#fff;}
+  .opciones label:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px;}
+  .pista{font-size:.85rem;color:var(--ink-soft);margin:8px 0 0;}
+  #otroIrpf{margin-top:10px;display:none;}
 
-.total { margin: 0 0 4px; font-size: .95rem; color: var(--verde-oscuro); font-weight: 600; }
-.total-cifra {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.1; margin: 0 0 20px; color: var(--verde-oscuro);
-  font-variant-numeric: tabular-nums;
-}
-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-td { padding: 9px 0; border-bottom: 1px solid rgba(47,74,58,.2); }
-td:last-child { text-align: right; font-weight: 600; }
-tr.resta td:last-child { color: var(--aviso); }
-tr.final td { border-bottom: 0; border-top: 2px solid var(--verde-oscuro); font-size: 1.05rem; }
-.acciones { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
-.acciones button {
-  font: inherit; padding: 10px 16px; border-radius: 8px; cursor: pointer;
-  border: 1px solid var(--verde-oscuro); background: var(--verde-oscuro); color: #fff;
-}
-.acciones button.sec { background: transparent; color: var(--verde-oscuro); }
-.estado { min-height: 1.4em; font-size: .9rem; color: var(--verde-oscuro); margin-top: 8px; }
-.error { color: #9b2c2c; font-size: .9rem; }
+  .total{margin:0 0 4px;font-size:.95rem;color:var(--accent);font-weight:600;}
+  .total-cifra{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2.2rem,6vw,3.1rem);line-height:1.1;margin:0 0 1.2rem;color:var(--ink);font-variant-numeric:tabular-nums;}
+  table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;}
+  td{padding:.55rem 0;border-bottom:1px solid rgba(30,42,56,.15);}
+  td:last-child{text-align:right;font-weight:600;}
+  tr.resta td:last-child{color:var(--warn);}
+  tr.final td{border-bottom:0;border-top:2px solid var(--ink);font-size:1.05rem;}
+  .acciones{margin-top:1.2rem;display:flex;gap:10px;flex-wrap:wrap;}
+  .acciones button{font:inherit;font-size:.92rem;font-weight:500;padding:.65rem 1.1rem;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:#fff;}
+  .acciones button.sec{background:transparent;color:var(--accent);}
+  .estado{min-height:1.4em;font-size:.9rem;color:var(--accent);margin-top:8px;}
+  .error{color:#9B2C2C;font-size:.9rem;}
 
-.cta {
-  margin: 32px 0; padding: 22px 26px; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel);
-  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
-}
-.cta p { margin: 0; max-width: 52ch; }
-.cta a.boton {
-  background: var(--verde); color: #fff; text-decoration: none; padding: 11px 18px; border-radius: 8px; font-weight: 600;
-}
+  .cta{margin:2rem 0;padding:1.4rem 1.6rem;border:1px solid var(--line);background:var(--surface);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+  .cta p{margin:0;max-width:52ch;color:var(--ink-soft);}
+  .cta a.boton{background:var(--accent);color:#fff;text-decoration:none;padding:.7rem 1.3rem;font-weight:500;font-size:.95rem;}
 
-article { max-width: 68ch; }
-article h2 { font-family: Georgia, "Times New Roman", serif; color: var(--verde-oscuro); font-size: 1.5rem; margin: 36px 0 10px; }
-article h3 { font-size: 1.05rem; margin: 22px 0 4px; }
-article p, article li { color: #38423b; }
-.ejemplo { background: var(--papel); border-left: 4px solid var(--verde); padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  article{max-width:68ch;}
+  article h2{font-size:1.35rem;margin:2.2rem 0 .5rem;}
+  article h3{font-size:1.1rem;margin:1.4rem 0 .2rem;}
+  article p,article li{color:var(--ink-soft);}
+  .ejemplo{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);padding:1rem 1.2rem;margin:1rem 0;color:var(--ink-soft);}
 
-footer { border-top: 1px solid var(--linea); padding: 22px 20px; text-align: center; color: var(--gris); font-size: .88rem; }
+  footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;margin-top:2rem;}
+  footer .wrap{max-width:960px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  footer a{color:var(--ink-soft);text-decoration:none;margin-right:1rem;}
 
-@media (max-width: 720px) {
-  .herramienta { grid-template-columns: 1fr; }
-  .entrada { border-right: 0; border-bottom: 1px solid var(--linea); }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media (max-width:720px){
+    h1{font-size:2rem;}
+    .herramienta{grid-template-columns:1fr;}
+    .entrada{border-right:0;border-bottom:1px solid var(--line);}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 </head>
 <body>
-
-<header class="cabecera">
-  <div>
-    <a class="marca" href="/">Plantilla Facturación</a>
-    <nav aria-label="Principal">
-      <a href="/">Plantillas</a>
-      <a href="/blog/">Blog</a>
-      <a href="/calculadora-iva-irpf.html" aria-current="page">Calculadora</a>
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">Plantilla<span>Factura</span></a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="calculadora-iva-irpf.html" aria-current="page">Calculadora</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
   </div>
 </header>
@@ -222,7 +188,7 @@ footer { border-top: 1px solid var(--linea); padding: 22px 20px; text-align: cen
 
   <aside class="cta">
     <p>¿Ya tienes los importes claros? Descarga una plantilla de factura lista para rellenar, en Excel o PDF.</p>
-    <a class="boton" href="/">Ver plantillas de factura</a>
+    <a class="boton" href="plantilla-factura-autonomos.html">Ver plantillas de factura</a>
   </aside>
 
   <article>
@@ -250,7 +216,17 @@ footer { border-top: 1px solid var(--linea); padding: 22px 20px; text-align: cen
   </article>
 </main>
 
-<footer>© <span id="anio"></span> Plantilla Facturación · Calculadora gratuita, tus datos no salen de tu navegador</footer>
+<footer>
+  <div class="wrap">
+    <div>© <span id="anio"></span> PlantillaFactura · Calculadora gratuita, tus datos no salen de tu navegador</div>
+    <div>
+      <a href="sobre-nosotros.html">Sobre nosotros</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="politica-privacidad.html">Privacidad</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</footer>
 
 <script>
 (function () {
@@ -359,5 +335,6 @@ footer { border-top: 1px solid var(--linea); padding: 22px 20px; text-align: cen
   calcular();
 })();
 </script>
+<script src="assets/cookies.js" defer></script>
 </body>
 </html>
