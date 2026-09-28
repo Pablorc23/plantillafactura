@@ -1,195 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745430115772287"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745430115772287" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PlantillaFactura — Modelos de factura para autónomos en Excel y PDF</title>
-<meta name="description" content="Plantillas de factura gratuitas para autónomos españoles, listas para descargar en Excel y PDF, con el IVA y el IRPF ya calculados.">
+<title>Blog | Guías de facturación para autónomos | PlantillaFactura</title>
+<meta name="description" content="Guías claras y actualizadas sobre facturación, IVA e IRPF para autónomos en España.">
+<link rel="canonical" href="https://plantillafacturacion.es/blog/index.html">
+<meta property="og:url" content="https://plantillafacturacion.es/blog/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://plantillafacturacion.es/">
-<meta property="og:title" content="PlantillaFactura — Modelos de factura para autónomos">
-<meta property="og:description" content="Plantillas de factura gratuitas en Excel y PDF, con IVA e IRPF ya calculados.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://plantillafacturacion.es/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "PlantillaFactura",
-  "url": "https://plantillafacturacion.es/",
-  "description": "Plantillas de factura gratuitas para autónomos en España, en Excel y PDF, con IVA e IRPF ya calculados."
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "PlantillaFactura",
-  "url": "https://plantillafacturacion.es/",
-  "logo": "https://plantillafacturacion.es/favicon.svg"
-}
-</script>
 <style>
-  :root{
-    --bg:#EDEBE3; --surface:#FFFFFF; --ink:#1E2A38; --ink-soft:#5B6472;
-    --accent:#2F6F62; --line:#D8D3C5;
-  }
+  :root{--bg:#EDEBE3;--surface:#FFFFFF;--ink:#1E2A38;--ink-soft:#5B6472;--accent:#2F6F62;--line:#D8D3C5;}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.6;}
-  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;margin:0 0 .5em;color:var(--ink);}
+  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;color:var(--ink);}
   a{color:var(--accent);}
   .wrap{max-width:960px;margin:0 auto;padding:0 1.5rem;}
-
   header{border-bottom:1px solid var(--line);}
   .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.4rem;padding:1.1rem 0;max-width:960px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
-  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;letter-spacing:.01em;}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;text-decoration:none;color:var(--ink);}
   .brand span{color:var(--accent);}
   .nav a{margin-left:1.5rem;color:var(--ink-soft);text-decoration:none;font-size:.95rem;}
   .nav a:hover{color:var(--accent);}
+  .hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line);}
+  .hero h1{font-size:2.2rem;}
+  .hero p{color:var(--ink-soft);max-width:52ch;}
 
-  .hero{padding:4.5rem 0 3.5rem;border-bottom:1px solid var(--line);}
-  .hero h1{font-size:2.6rem;max-width:14ch;line-height:1.15;}
-  .hero p{max-width:52ch;color:var(--ink-soft);font-size:1.05rem;}
-  .ledger-mark{display:flex;gap:0;margin-top:2rem;border:1px solid var(--line);background:var(--surface);max-width:420px;}
-  .ledger-mark div{flex:1;padding:1rem 1.2rem;border-right:1px solid var(--line);}
-  .ledger-mark div:last-child{border-right:none;}
-  .ledger-mark strong{display:block;font-family:"Fraunces",serif;font-size:1.4rem;color:var(--accent);}
-  .ledger-mark small{color:var(--ink-soft);font-size:.78rem;}
+  .featured{margin:3rem 0 1.5rem;background:var(--surface);border:1px solid var(--line);padding:2rem;text-decoration:none;display:block;}
+  .featured .kicker{color:var(--accent);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+  .featured h2{font-size:1.6rem;margin:.5rem 0 .6rem;}
+  .featured p{color:var(--ink-soft);margin:0 0 .9rem;max-width:60ch;}
+  .meta{color:var(--ink-soft);font-size:.82rem;}
+  .meta span:not(:last-child)::after{content:"·";margin:0 .5rem;}
 
-  section.cats{padding:3.5rem 0;}
-  section.cats h2{font-size:1.6rem;}
-  .cat-list{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--line);}
-  .cat-list li{border-bottom:1px solid var(--line);padding:1.1rem 0;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;}
-  .cat-list a{text-decoration:none;color:var(--ink);font-weight:500;font-size:1.05rem;}
-  .cat-list a:hover{color:var(--accent);}
-  .cat-list .desc{color:var(--ink-soft);font-size:.92rem;flex:1;text-align:right;}
-  .cat-list .soon{color:var(--ink-soft);font-size:.85rem;font-style:italic;}
-
-  section.why{padding:3rem 0 4rem;}
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:1.5rem;}
-  .why-grid h3{font-size:1.05rem;margin-bottom:.4rem;}
-  .why-grid p{color:var(--ink-soft);font-size:.92rem;margin:0;}
-  section.guides{padding:1rem 0 4rem;}
-  .guides-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem;}
-  .guides-head a{font-size:.9rem;text-decoration:none;white-space:nowrap;}
-  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.6rem;}
-  .guide-card{background:var(--surface);border:1px solid var(--line);padding:1.3rem;text-decoration:none;display:block;}
-  .guide-card .tag{color:var(--accent);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
-  .guide-card h3{font-size:1.05rem;margin:.5rem 0 .4rem;color:var(--ink);line-height:1.3;}
-  .guide-card p{margin:0;color:var(--ink-soft);font-size:.87rem;}
-
-  @media (max-width:680px){.why-grid{grid-template-columns:1fr;} .hero h1{font-size:2rem;} .cat-list li{flex-direction:column;align-items:flex-start;} .cat-list .desc{text-align:left;} .guide-grid{grid-template-columns:1fr;}}
+  .posts{padding-bottom:4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+  .post{background:var(--surface);border:1px solid var(--line);padding:1.4rem;text-decoration:none;display:block;}
+  .post h3{font-size:1.05rem;margin:.4rem 0 .5rem;color:var(--ink);font-weight:600;}
+  .post p{color:var(--ink-soft);margin:0 0 .7rem;font-size:.9rem;}
+  .post .kicker{color:var(--accent);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
 
   footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
   footer a{color:var(--ink-soft);text-decoration:none;margin-right:1rem;}
-  footer a:hover{color:var(--accent);}
 </style>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
-
 <header>
   <div class="nav">
-    <a href="index.html" class="brand" style="text-decoration:none">Plantilla<span>Factura</span></a>
+    <a href="../index.html" class="brand">Plantilla<span>Factura</span></a>
     <nav>
-      <a href="plantilla-factura-autonomos.html">Plantillas</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="../plantilla-factura-autonomos.html">Plantillas</a>
+      <a href="index.html">Blog</a>
+      <a href="../contacto.html">Contacto</a>
     </nav>
   </div>
 </header>
 
 <div class="hero wrap">
-  <h1>Modelos de factura listos para tu próximo cliente</h1>
-  <p>Plantillas gratuitas en Excel y PDF, adaptadas a la normativa española, con el IVA y el IRPF ya calculados para que no pierdas tiempo con fórmulas.</p>
-  <div class="ledger-mark">
-    <div><strong>21%</strong><small>IVA general</small></div>
-    <div><strong>15% / 7%</strong><small>Retención IRPF</small></div>
-    <div><strong>0€</strong><small>Coste de uso</small></div>
-  </div>
+  <h1>Guías de facturación para autónomos</h1>
+  <p>Todo lo que necesitas saber para facturar bien a la primera: IVA, IRPF, rectificativas y buenas prácticas, explicado sin jerga.</p>
 </div>
 
-<section class="cats wrap">
-  <h2>Elige tu plantilla</h2>
-  <ul class="cat-list">
-    <li>
-      <a href="plantilla-factura-autonomos.html">Factura básica para autónomos</a>
-      <span class="desc">IVA + IRPF, numeración correlativa, formato Excel y PDF</span>
-    </li>
-    <li>
-      <a href="factura-modulos.html">Factura para autónomo en régimen de módulos</a>
-      <span class="desc">Sin retención de IRPF, estimación objetiva</span>
-    </li>
-    <li>
-      <a href="factura-rectificativa.html">Factura rectificativa</a>
-      <span class="desc">Anula o corrige una factura ya emitida</span>
-    </li>
-    <li>
-      <a href="factura-intracomunitaria.html">Factura para operaciones intracomunitarias</a>
-      <span class="desc">Sin IVA, inversión del sujeto pasivo</span>
-    </li>
-  </ul>
-</section>
+<div class="wrap">
 
-<section class="why wrap">
-  <h2>Por qué esta plantilla y no otra</h2>
-  <div class="why-grid">
-    <div>
-      <h3>Cumple la normativa</h3>
-      <p>Incluye todos los campos que exige la Agencia Tributaria para que la factura sea válida fiscalmente.</p>
-    </div>
-    <div>
-      <h3>Cálculos automáticos</h3>
-      <p>El Excel calcula solo la base imponible, el IVA y la retención de IRPF según los datos que introduzcas.</p>
-    </div>
-    <div>
-      <h3>Sin registro</h3>
-      <p>Descarga directa, sin crear cuenta ni dejar tu correo. La plantilla es tuya para siempre.</p>
-    </div>
-  </div>
-</section>
+  <a class="featured" href="como-hacer-una-factura-autonomo.html">
+    <span class="kicker">Destacado · Guía completa</span>
+    <h2>Cómo hacer una factura siendo autónomo en 2026</h2>
+    <p>Campos obligatorios, numeración, cálculo de IVA e IRPF y errores que debes evitar.</p>
+    <div class="meta"><span>23 sept 2026</span><span>9 min de lectura</span></div>
+  </a>
 
-
-<section class="guides wrap">
-  <div class="guides-head">
-    <h2>Últimas guías</h2>
-    <a href="blog/index.html">Ver todas las guías →</a>
-  </div>
-  <div class="guide-grid">
-    <a class="guide-card" href="blog/como-hacer-una-factura-autonomo.html">
-      <span class="tag">Guía completa</span>
-      <h3>Cómo hacer una factura siendo autónomo en 2026</h3>
-      <p>Campos obligatorios, numeración y cálculo de IVA e IRPF paso a paso.</p>
+  <div class="posts">
+    <a class="post" href="puedo-facturar-sin-ser-autonomo.html">
+      <span class="kicker">Legal</span>
+      <h3>¿Puedo facturar sin ser autónomo?</h3>
+      <p>Qué dice la ley, cuándo hace falta el alta y qué riesgos tiene facturar sin ella.</p>
+      <div class="meta"><span>28 sept 2026</span><span>8 min de lectura</span></div>
     </a>
-    <a class="guide-card" href="blog/factura-rectificativa-cuando-emitirla.html">
-      <span class="tag">Guía completa</span>
+    <a class="post" href="factura-rectificativa-cuando-emitirla.html">
+      <span class="kicker">Legal</span>
       <h3>Factura rectificativa: cuándo y cómo emitirla</h3>
-      <p>Requisitos, numeración y diferencias con un simple abono.</p>
+      <p>Qué diferencia hay con un abono, qué datos debe incluir y cómo numerarla correctamente.</p>
+      <div class="meta"><span>8 min de lectura</span></div>
     </a>
-    <a class="guide-card" href="blog/gastos-deducibles-autonomos.html">
-      <span class="tag">Guía completa</span>
-      <h3>Gastos deducibles para autónomos</h3>
-      <p>Qué puedes deducirte y qué exige Hacienda para admitirlo.</p>
+    <a class="post" href="iva-irpf-facturas-autonomos.html">
+      <span class="kicker">Fiscalidad</span>
+      <h3>IVA e IRPF en las facturas de autónomos</h3>
+      <p>Tabla de tipos de IVA, retenciones de IRPF y un ejemplo de cálculo paso a paso.</p>
+      <div class="meta"><span>8 min de lectura</span></div>
+    </a>
+    <a class="post" href="como-darse-de-alta-autonomo.html">
+      <span class="kicker">Trámites</span>
+      <h3>Cómo darte de alta como autónomo paso a paso</h3>
+      <p>Trámites en Hacienda y Seguridad Social, documentos y errores habituales al empezar.</p>
+      <div class="meta"><span>9 min de lectura</span></div>
+    </a>
+    <a class="post" href="gastos-deducibles-autonomos.html">
+      <span class="kicker">Fiscalidad</span>
+      <h3>Gastos deducibles para autónomos: lista completa</h3>
+      <p>Qué gastos puedes deducirte, cuáles son polémicos y qué exige Hacienda para admitirlos.</p>
+      <div class="meta"><span>9 min de lectura</span></div>
+    </a>
+    <a class="post" href="factura-simplificada-vs-completa.html">
+      <span class="kicker">Legal</span>
+      <h3>Factura simplificada vs factura completa</h3>
+      <p>Diferencias, límites de importe y cuándo el cliente puede exigirte una factura completa.</p>
+      <div class="meta"><span>7 min de lectura</span></div>
+    </a>
+    <a class="post" href="factura-electronica-obligatoria-verifactu.html">
+      <span class="kicker">Normativa</span>
+      <h3>Factura electrónica obligatoria: qué es Verifactu</h3>
+      <p>A quién afecta, desde cuándo y qué debes hacer si facturas con Excel.</p>
+      <div class="meta"><span>8 min de lectura</span></div>
+    </a>
+    <a class="post" href="cobrar-facturas-impagadas-pasos.html">
+      <span class="kicker">Cobros</span>
+      <h3>Cómo cobrar una factura impagada</h3>
+      <p>Pasos antes de ir a juicio: burofax, intereses de demora y procedimiento monitorio.</p>
+      <div class="meta"><span>8 min de lectura</span></div>
+    </a>
+    <a class="post" href="modelo-130-131-pagos-fraccionados.html">
+      <span class="kicker">Impuestos</span>
+      <h3>Modelo 130 y 131: pagos fraccionados</h3>
+      <p>Diferencias, quién debe presentarlos y los plazos trimestrales.</p>
+      <div class="meta"><span>8 min de lectura</span></div>
+    </a>
+    <a class="post" href="autonomo-societario-diferencias.html">
+      <span class="kicker">Trámites</span>
+      <h3>Autónomo societario: qué es</h3>
+      <p>En qué se diferencia del autónomo persona física y cuándo estás obligado.</p>
+      <div class="meta"><span>7 min de lectura</span></div>
+    </a>
+    <a class="post" href="facturar-clientes-extranjeros-ue.html">
+      <span class="kicker">Internacional</span>
+      <h3>Facturar a clientes extranjeros: UE y fuera de la UE</h3>
+      <p>IVA, inversión del sujeto pasivo, modelo 349 y exportación de servicios.</p>
+      <div class="meta"><span>8 min de lectura</span></div>
+    </a>
+    <a class="post" href="recargo-equivalencia-que-es.html">
+      <span class="kicker">Impuestos</span>
+      <h3>Recargo de equivalencia: qué es</h3>
+      <p>A quién afecta, porcentajes y ventajas e inconvenientes.</p>
+      <div class="meta"><span>7 min de lectura</span></div>
+    </a>
+    <a class="post" href="factura-proforma-para-que-sirve.html">
+      <span class="kicker">Legal</span>
+      <h3>Factura proforma: qué es y para qué sirve</h3>
+      <p>Diferencias con una factura real y qué datos debe incluir.</p>
+      <div class="meta"><span>7 min de lectura</span></div>
+    </a>
+    <a class="post" href="errores-comunes-facturar-sanciones.html">
+      <span class="kicker">Legal</span>
+      <h3>8 errores al facturar que pueden costarte una sanción</h3>
+      <p>Los fallos más comunes y cómo evitarlos desde tu primera factura.</p>
+      <div class="meta"><span>8 min de lectura</span></div>
     </a>
   </div>
-</section>
+
+</div>
 
 <footer>
   <div class="wrap">
     <div>© 2026 PlantillaFactura</div>
     <div>
-      <a href="sobre-nosotros.html">Sobre nosotros</a><a href="aviso-legal.html">Aviso legal</a>
-      <a href="politica-privacidad.html">Privacidad</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="../sobre-nosotros.html">Sobre nosotros</a><a href="../aviso-legal.html">Aviso legal</a>
+      <a href="../politica-privacidad.html">Privacidad</a>
+      <a href="../contacto.html">Contacto</a>
     </div>
   </div>
 </footer>
-
-<script src="assets/cookies.js" defer></script>
+<script src="../assets/cookies.js" defer></script>
 </body>
 </html>
