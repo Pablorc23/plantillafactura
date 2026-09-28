@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de factura para autónomos: IVA e IRPF online</title>
+<meta name="description" content="Calcula el total de tu factura de autónomo: suma el IVA, resta la retención de IRPF y obtén el importe a cobrar. También al revés, desde el total hasta la base imponible.">
+<link rel="canonical" href="https://plantillafacturacion.es/calculadora-iva-irpf.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de factura para autónomos",
+  "url": "https://plantillafacturacion.es/calculadora-iva-irpf.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "es",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+<style>
+:root {
+  --crema: #f6f2e8;
+  --papel: #fffdf8;
+  --verde: #4a6b57;
+  --verde-oscuro: #2f4a3a;
+  --verde-suave: #e3ebe4;
+  --tinta: #26302a;
+  --gris: #6b736d;
+  --linea: #d9d3c2;
+  --aviso: #8a5a1c;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+a { color: var(--verde-oscuro); }
+:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
+
+.cabecera { border-bottom: 1px solid var(--linea); background: var(--papel); }
+.cabecera div {
+  max-width: 980px; margin: 0 auto; padding: 14px 20px;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.marca { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 1.1rem; color: var(--verde-oscuro); text-decoration: none; }
+.cabecera nav a { margin-left: 18px; font-size: .95rem; text-decoration: none; }
+.cabecera nav a:hover { text-decoration: underline; }
+
+main { max-width: 980px; margin: 0 auto; padding: 36px 20px 60px; }
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  line-height: 1.15; margin: 0 0 12px; color: var(--verde-oscuro);
+}
+.intro { max-width: 62ch; color: var(--gris); margin: 0 0 28px; font-size: 1.05rem; }
+
+.herramienta {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; overflow: hidden;
+}
+.entrada { padding: 26px; border-right: 1px solid var(--linea); }
+.salida { padding: 26px; background: var(--verde-suave); }
+
+.modo { display: flex; border: 1px solid var(--verde); border-radius: 8px; overflow: hidden; margin-bottom: 22px; }
+.modo button {
+  flex: 1; padding: 10px 8px; border: 0; background: transparent; cursor: pointer;
+  font: inherit; font-size: .92rem; color: var(--verde-oscuro);
+}
+.modo button[aria-pressed="true"] { background: var(--verde); color: #fff; font-weight: 600; }
+
+label, .etiqueta { display: block; font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
+.campo { margin-bottom: 18px; }
+.importe { position: relative; }
+.importe input { padding-right: 38px; }
+.importe span { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--gris); pointer-events: none; }
+input[type="number"], select {
+  width: 100%; padding: 11px 12px; font: inherit; font-size: 1.05rem;
+  border: 1px solid var(--linea); border-radius: 8px; background: #fff; color: var(--tinta);
+}
+input[type="number"]:focus, select:focus { border-color: var(--verde); }
+
+.opciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.opciones label {
+  margin: 0; font-weight: 500; cursor: pointer;
+  border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px; background: #fff; font-size: .93rem;
+}
+.opciones input { position: absolute; opacity: 0; pointer-events: none; }
+.opciones input:checked + span { color: #fff; }
+.opciones label:has(input:checked) { background: var(--verde); border-color: var(--verde); color: #fff; }
+.opciones label:has(input:focus-visible) { outline: 3px solid var(--verde); outline-offset: 2px; }
+.pista { font-size: .85rem; color: var(--gris); margin: 8px 0 0; }
+#otroIrpf { margin-top: 10px; display: none; }
+
+.total { margin: 0 0 4px; font-size: .95rem; color: var(--verde-oscuro); font-weight: 600; }
+.total-cifra {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.1; margin: 0 0 20px; color: var(--verde-oscuro);
+  font-variant-numeric: tabular-nums;
+}
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+td { padding: 9px 0; border-bottom: 1px solid rgba(47,74,58,.2); }
+td:last-child { text-align: right; font-weight: 600; }
+tr.resta td:last-child { color: var(--aviso); }
+tr.final td { border-bottom: 0; border-top: 2px solid var(--verde-oscuro); font-size: 1.05rem; }
+.acciones { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.acciones button {
+  font: inherit; padding: 10px 16px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--verde-oscuro); background: var(--verde-oscuro); color: #fff;
+}
+.acciones button.sec { background: transparent; color: var(--verde-oscuro); }
+.estado { min-height: 1.4em; font-size: .9rem; color: var(--verde-oscuro); margin-top: 8px; }
+.error { color: #9b2c2c; font-size: .9rem; }
+
+.cta {
+  margin: 32px 0; padding: 22px 26px; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.cta p { margin: 0; max-width: 52ch; }
+.cta a.boton {
+  background: var(--verde); color: #fff; text-decoration: none; padding: 11px 18px; border-radius: 8px; font-weight: 600;
+}
+
+article { max-width: 68ch; }
+article h2 { font-family: Georgia, "Times New Roman", serif; color: var(--verde-oscuro); font-size: 1.5rem; margin: 36px 0 10px; }
+article h3 { font-size: 1.05rem; margin: 22px 0 4px; }
+article p, article li { color: #38423b; }
+.ejemplo { background: var(--papel); border-left: 4px solid var(--verde); padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+
+footer { border-top: 1px solid var(--linea); padding: 22px 20px; text-align: center; color: var(--gris); font-size: .88rem; }
+
+@media (max-width: 720px) {
+  .herramienta { grid-template-columns: 1fr; }
+  .entrada { border-right: 0; border-bottom: 1px solid var(--linea); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div>
+    <a class="marca" href="/">Plantilla Facturación</a>
+    <nav aria-label="Principal">
+      <a href="/">Plantillas</a>
+      <a href="/blog/">Blog</a>
+      <a href="/calculadora-iva-irpf.html" aria-current="page">Calculadora</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Calculadora de factura: IVA e IRPF</h1>
+  <p class="intro">Calcula cuánto debes poner en tu factura de autónomo. Suma el IVA, resta la retención de IRPF y obtén el importe que cobrará realmente tu cliente. Sin registro y sin guardar tus datos.</p>
+
+  <section class="herramienta" aria-label="Calculadora">
+    <div class="entrada">
+      <div class="modo" role="group" aria-label="Qué quieres calcular">
+        <button type="button" id="modoBase" aria-pressed="true">Tengo la base</button>
+        <button type="button" id="modoTotal" aria-pressed="false">Tengo el total</button>
+      </div>
+
+      <div class="campo">
+        <label for="cantidad" id="etiquetaCantidad">Base imponible (sin IVA)</label>
+        <div class="importe">
+          <input type="number" id="cantidad" inputmode="decimal" min="0" step="0.01" value="1000" autocomplete="off">
+          <span>€</span>
+        </div>
+        <div class="error" id="error" role="alert"></div>
+      </div>
+
+      <div class="campo">
+        <span class="etiqueta" id="etIva">Tipo de IVA</span>
+        <div class="opciones" role="radiogroup" aria-labelledby="etIva">
+          <label><input type="radio" name="iva" value="21" checked><span>21 %</span></label>
+          <label><input type="radio" name="iva" value="10"><span>10 %</span></label>
+          <label><input type="radio" name="iva" value="4"><span>4 %</span></label>
+          <label><input type="radio" name="iva" value="0"><span>Sin IVA</span></label>
+        </div>
+        <p class="pista">El 21 % es el tipo general. El 10 % y el 4 % son reducido y superreducido; el 0 % se usa en operaciones exentas.</p>
+      </div>
+
+      <div class="campo">
+        <span class="etiqueta" id="etIrpf">Retención de IRPF</span>
+        <div class="opciones" role="radiogroup" aria-labelledby="etIrpf">
+          <label><input type="radio" name="irpf" value="15" checked><span>15 %</span></label>
+          <label><input type="radio" name="irpf" value="7"><span>7 %</span></label>
+          <label><input type="radio" name="irpf" value="0"><span>Sin retención</span></label>
+          <label><input type="radio" name="irpf" value="otro"><span>Otro</span></label>
+        </div>
+        <div id="otroIrpf" class="importe">
+          <input type="number" id="irpfOtro" inputmode="decimal" min="0" max="100" step="0.01" value="1" aria-label="Porcentaje de retención personalizado">
+          <span>%</span>
+        </div>
+        <p class="pista">La retención solo se aplica si tu cliente es una empresa o un profesional. Si facturas a un particular, elige «Sin retención». El 7 % es para los tres primeros años de actividad.</p>
+      </div>
+    </div>
+
+    <div class="salida" aria-live="polite">
+      <p class="total" id="rotuloTotal">Total a cobrar</p>
+      <p class="total-cifra" id="cifraTotal">0,00 €</p>
+      <table>
+        <tbody>
+          <tr><td>Base imponible</td><td id="rBase">0,00 €</td></tr>
+          <tr><td id="rIvaTxt">IVA (21 %)</td><td id="rIva">0,00 €</td></tr>
+          <tr><td>Total factura</td><td id="rFactura">0,00 €</td></tr>
+          <tr class="resta"><td id="rIrpfTxt">Retención IRPF (15 %)</td><td id="rIrpf">0,00 €</td></tr>
+          <tr class="final"><td>Importe a cobrar</td><td id="rCobro">0,00 €</td></tr>
+        </tbody>
+      </table>
+      <div class="acciones">
+        <button type="button" id="copiar">Copiar resumen</button>
+        <button type="button" id="limpiar" class="sec">Empezar de nuevo</button>
+      </div>
+      <div class="estado" id="estado" role="status"></div>
+    </div>
+  </section>
+
+  <aside class="cta">
+    <p>¿Ya tienes los importes claros? Descarga una plantilla de factura lista para rellenar, en Excel o PDF.</p>
+    <a class="boton" href="/">Ver plantillas de factura</a>
+  </aside>
+
+  <article>
+    <h2>Cómo se calcula una factura de autónomo</h2>
+    <p>Una factura con IVA e IRPF sigue siempre el mismo orden. Primero se parte de la base imponible, que es el precio de tu trabajo sin impuestos. Después se suma el IVA, que se calcula sobre esa base. Por último se resta la retención de IRPF, que también se calcula sobre la base, no sobre el total con IVA.</p>
+    <div class="ejemplo">
+      <strong>Ejemplo con 1.000 € de base:</strong><br>
+      IVA al 21 %: 210 €<br>
+      Total de la factura: 1.210 €<br>
+      Retención de IRPF al 15 %: 150 €<br>
+      Tu cliente te paga: 1.060 €
+    </div>
+    <p>La retención no es un gasto tuyo. Tu cliente la ingresa en Hacienda a tu nombre y tú la descuentas después en tu declaración trimestral y en la renta.</p>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿El IRPF se calcula sobre la base o sobre el total?</h3>
+    <p>Sobre la base imponible. El IVA nunca forma parte de la base de la retención.</p>
+    <h3>¿Qué retención de IRPF debo aplicar?</h3>
+    <p>Con carácter general, el 15 % en actividades profesionales. Si estás en los primeros años de actividad y cumples los requisitos, puedes aplicar el 7 %. Para otras actividades existen porcentajes distintos, así que confirma el tuyo con tu gestor o con la Agencia Tributaria.</p>
+    <h3>¿Tengo que aplicar retención si mi cliente es un particular?</h3>
+    <p>No. La retención solo se practica cuando quien te paga es una empresa, un autónomo u otro profesional obligado a retener.</p>
+    <h3>¿Cómo saco la base si solo conozco el total?</h3>
+    <p>Usa la pestaña «Tengo el total». Indica el importe que quieres facturar con IVA incluido, o el que quieres cobrar tras la retención, y la calculadora te devuelve la base que debes poner en la factura.</p>
+    <p><em>Esta calculadora es orientativa y no sustituye el asesoramiento de un gestor. Revisa los tipos vigentes para tu actividad antes de emitir la factura.</em></p>
+  </article>
+</main>
+
+<footer>© <span id="anio"></span> Plantilla Facturación · Calculadora gratuita, tus datos no salen de tu navegador</footer>
+
+<script>
+(function () {
+  var modo = 'base'; // 'base' o 'total'
+  var el = function (id) { return document.getElementById(id); };
+  var fmt = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' });
+  var pct = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 2 });
+
+  el('anio').textContent = new Date().getFullYear();
+
+  function valorRadio(nombre) {
+    var r = document.querySelector('input[name="' + nombre + '"]:checked');
+    return r ? r.value : null;
+  }
+  function tipoIva() { return parseFloat(valorRadio('iva')); }
+  function tipoIrpf() {
+    var v = valorRadio('irpf');
+    if (v === 'otro') {
+      var n = parseFloat(el('irpfOtro').value);
+      return isNaN(n) ? 0 : Math.min(Math.max(n, 0), 100);
+    }
+    return parseFloat(v);
+  }
+  function r2(n) { return Math.round((n + Number.EPSILON) * 100) / 100; }
+
+  function calcular() {
+    var texto = el('cantidad').value;
+    var n = parseFloat(texto);
+    var err = el('error');
+    err.textContent = '';
+    if (texto === '' || isNaN(n) || n < 0) {
+      if (texto !== '') err.textContent = 'Introduce un importe válido, mayor o igual que 0.';
+      n = 0;
+    }
+    var iva = tipoIva() / 100;
+    var irpf = tipoIrpf() / 100;
+    var base;
+
+    if (modo === 'base') {
+      base = n;
+    } else {
+      // Con "Tengo el total" el importe es lo que se cobra: base * (1 + iva - irpf)
+      var factor = 1 + iva - irpf;
+      base = factor > 0 ? n / factor : 0;
+    }
+    base = r2(base);
+    var cuotaIva = r2(base * iva);
+    var totalFactura = r2(base + cuotaIva);
+    var cuotaIrpf = r2(base * irpf);
+    var cobro = r2(totalFactura - cuotaIrpf);
+
+    el('rBase').textContent = fmt.format(base);
+    el('rIvaTxt').textContent = 'IVA (' + pct.format(iva * 100) + ' %)';
+    el('rIva').textContent = fmt.format(cuotaIva);
+    el('rFactura').textContent = fmt.format(totalFactura);
+    el('rIrpfTxt').textContent = 'Retención IRPF (' + pct.format(irpf * 100) + ' %)';
+    el('rIrpf').textContent = '− ' + fmt.format(cuotaIrpf);
+    el('rCobro').textContent = fmt.format(cobro);
+    el('cifraTotal').textContent = fmt.format(cobro);
+    el('estado').textContent = '';
+  }
+
+  function cambiarModo(nuevo) {
+    modo = nuevo;
+    el('modoBase').setAttribute('aria-pressed', nuevo === 'base');
+    el('modoTotal').setAttribute('aria-pressed', nuevo === 'total');
+    el('etiquetaCantidad').textContent = nuevo === 'base'
+      ? 'Base imponible (sin IVA)'
+      : 'Importe a cobrar (IVA incluido, retención descontada)';
+    calcular();
+  }
+
+  el('modoBase').addEventListener('click', function () { cambiarModo('base'); });
+  el('modoTotal').addEventListener('click', function () { cambiarModo('total'); });
+  el('cantidad').addEventListener('input', calcular);
+  el('irpfOtro').addEventListener('input', calcular);
+
+  document.querySelectorAll('input[name="iva"], input[name="irpf"]').forEach(function (r) {
+    r.addEventListener('change', function () {
+      el('otroIrpf').style.display = valorRadio('irpf') === 'otro' ? 'block' : 'none';
+      calcular();
+    });
+  });
+
+  el('limpiar').addEventListener('click', function () {
+    el('cantidad').value = '';
+    el('cantidad').focus();
+    calcular();
+  });
+
+  el('copiar').addEventListener('click', function () {
+    var lineas = [
+      'Base imponible: ' + el('rBase').textContent,
+      el('rIvaTxt').textContent + ': ' + el('rIva').textContent,
+      'Total factura: ' + el('rFactura').textContent,
+      el('rIrpfTxt').textContent + ': ' + el('rIrpf').textContent,
+      'Importe a cobrar: ' + el('rCobro').textContent
+    ].join('\n');
+    var ok = function () { el('estado').textContent = 'Resumen copiado.'; };
+    var ko = function () { el('estado').textContent = 'No se pudo copiar. Selecciona el texto de la tabla y cópialo a mano.'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(lineas).then(ok, ko);
+    } else { ko(); }
+  });
+
+  calcular();
+})();
+</script>
+</body>
+</html>
