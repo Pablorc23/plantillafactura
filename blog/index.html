@@ -10,41 +10,8 @@
 <meta property="og:url" content="https://plantillafacturacion.es/blog/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{--bg:#EDEBE3;--surface:#FFFFFF;--ink:#1E2A38;--ink-soft:#5B6472;--accent:#2F6F62;--line:#D8D3C5;}
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.6;}
-  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;color:var(--ink);}
-  a{color:var(--accent);}
-  .wrap{max-width:960px;margin:0 auto;padding:0 1.5rem;}
-  header{border-bottom:1px solid var(--line);}
-  .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.4rem;padding:1.1rem 0;max-width:960px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
-  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;text-decoration:none;color:var(--ink);}
-  .brand span{color:var(--accent);}
-  .nav a{margin-left:1.5rem;color:var(--ink-soft);text-decoration:none;font-size:.95rem;}
-  .nav a:hover{color:var(--accent);}
-  .hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line);}
-  .hero h1{font-size:2.2rem;}
-  .hero p{color:var(--ink-soft);max-width:52ch;}
-
-  .featured{margin:3rem 0 1.5rem;background:var(--surface);border:1px solid var(--line);padding:2rem;text-decoration:none;display:block;}
-  .featured .kicker{color:var(--accent);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
-  .featured h2{font-size:1.6rem;margin:.5rem 0 .6rem;}
-  .featured p{color:var(--ink-soft);margin:0 0 .9rem;max-width:60ch;}
-  .meta{color:var(--ink-soft);font-size:.82rem;}
-  .meta span:not(:last-child)::after{content:"·";margin:0 .5rem;}
-
-  .posts{padding-bottom:4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
-  .post{background:var(--surface);border:1px solid var(--line);padding:1.4rem;text-decoration:none;display:block;}
-  .post h3{font-size:1.05rem;margin:.4rem 0 .5rem;color:var(--ink);font-weight:600;}
-  .post p{color:var(--ink-soft);margin:0 0 .7rem;font-size:.9rem;}
-  .post .kicker{color:var(--accent);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
-
-  footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-  footer a{color:var(--ink-soft);text-decoration:none;margin-right:1rem;}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
@@ -52,14 +19,16 @@
   <div class="nav">
     <a href="../index.html" class="brand">Plantilla<span>Factura</span></a>
     <nav>
-      <a href="../plantilla-factura-autonomos.html">Plantillas</a>
-      <a href="index.html">Blog</a>
+      <a href="../plantilla-factura-autonomos.html">Modelos</a>
+      <a href="../calculadora-iva-irpf.html">Calculadora</a>
+      <a href="../blog/index.html" aria-current="page">Guías</a>
       <a href="../contacto.html">Contacto</a>
     </nav>
   </div>
 </header>
 
-<div class="hero wrap">
+<div class="hero wrap blog-hero">
+  <p class="kicker">Biblioteca</p>
   <h1>Guías de facturación para autónomos</h1>
   <p>Todo lo que necesitas saber para facturar bien a la primera: IVA, IRPF, rectificativas y buenas prácticas, explicado sin jerga.</p>
 </div>
@@ -166,12 +135,11 @@
   <div class="wrap">
     <div>© 2026 PlantillaFactura</div>
     <div>
-      <a href="../sobre-nosotros.html">Sobre nosotros</a><a href="../aviso-legal.html">Aviso legal</a>
-      <a href="../politica-privacidad.html">Privacidad</a>
-      <a href="../contacto.html">Contacto</a>
+      <a href="../index.html">Inicio</a><a href="../sobre-nosotros.html">Sobre nosotros</a><a href="../aviso-legal.html">Aviso legal</a><a href="../politica-privacidad.html">Privacidad</a><a href="../contacto.html">Contacto</a>
     </div>
   </div>
 </footer>
+
 <script src="../assets/cookies.js" defer></script>
 </body>
 </html>
