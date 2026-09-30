@@ -8,30 +8,25 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{--bg:#EDEBE3;--ink:#1E2A38;--ink-soft:#5B6472;--accent:#2F6F62;--line:#D8D3C5;}
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.65;}
-  h1,h2{font-family:"Fraunces",serif;font-weight:600;}
-  a{color:var(--accent);}
-  .wrap{max-width:720px;margin:0 auto;padding:0 1.5rem;}
-  header{border-bottom:1px solid var(--line);}
-  .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.4rem;padding:1.1rem 0;max-width:960px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
-  .brand{font-family:"Fraunces",serif;font-weight:600;}
-  .brand span{color:var(--accent);}
-  .nav a{color:var(--ink-soft);text-decoration:none;font-size:.95rem;}
-  article{padding:4.5rem 0 4rem;}
-  h1{font-size:2.5rem;max-width:20ch;line-height:1.2;}
-  footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;}
-  footer .wrap{max-width:960px;}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 </head>
 <body>
-<header><div class="nav"><a href="index.html" class="brand" style="text-decoration:none">Plantilla<span>Factura</span></a><a href="index.html">Inicio</a><a href="blog/index.html">Blog</a></div></header>
-<article class="wrap">
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">Plantilla<span>Factura</span></a>
+    <nav>
+      <a href="plantilla-factura-autonomos.html">Modelos</a>
+      <a href="calculadora-iva-irpf.html">Calculadora</a>
+      <a href="blog/index.html">Guías</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<article class="wrap legal">
   <h1>Política de privacidad y cookies</h1>
   <p>Esta política explica qué datos se recogen al visitar PlantillaFactura y con qué finalidad, en cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos (LOPDGDD).</p>
 
@@ -52,7 +47,15 @@
   <h2>Cambios en esta política</h2>
   <p>Esta política puede actualizarse para adaptarse a novedades legislativas o cambios en el funcionamiento del sitio. Se recomienda revisarla periódicamente.</p>
 </article>
-<footer><div class="wrap"><a href="index.html">Inicio</a><a href="blog/index.html">Blog</a> · <a href="sobre-nosotros.html">Sobre nosotros</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="contacto.html">Contacto</a></div></footer>
+<footer>
+  <div class="wrap">
+    <div>© 2026 PlantillaFactura</div>
+    <div>
+      <a href="index.html">Inicio</a><a href="sobre-nosotros.html">Sobre nosotros</a><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</footer>
+
 <script src="assets/cookies.js" defer></script>
 </body>
 </html>
