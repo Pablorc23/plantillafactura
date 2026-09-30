@@ -8,53 +8,8 @@
 <meta name="description" content="Descarga gratis la plantilla de factura rectificativa para autónomos en Excel y PDF: cuándo se usa, qué debe incluir y cómo anular o corregir una factura ya emitida.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#EDEBE3; --surface:#FFFFFF; --ink:#1E2A38; --ink-soft:#5B6472;
-    --accent:#2F6F62; --line:#D8D3C5;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.65;}
-  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;margin:1.8em 0 .5em;color:var(--ink);}
-  h1{margin-top:0;}
-  a{color:var(--accent);}
-  .wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
-
-  header{border-bottom:1px solid var(--line);}
-  .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.4rem;padding:1.1rem 0;max-width:960px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
-  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;}
-  .brand span{color:var(--accent);}
-  .nav a{margin-left:1.5rem;color:var(--ink-soft);text-decoration:none;font-size:.95rem;}
-
-  article{padding:4.5rem 0 4rem;}
- h1{font-size:2.4rem;max-width:22ch;line-height:1.2;}
-  .lede{color:var(--ink-soft);font-size:1.05rem;max-width:56ch;}
-
-  .download-box{background:var(--surface);border:1px solid var(--line);padding:1.5rem;margin:2rem 0;}
-  .download-box p{margin:0 0 1rem;color:var(--ink-soft);font-size:.9rem;}
-  .btn-row{display:flex;gap:.75rem;flex-wrap:wrap;}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:.7rem 1.3rem;text-decoration:none;font-weight:500;font-size:.95rem;}
-  .btn.alt{background:transparent;border:1px solid var(--ink);color:var(--ink);}
-
-  .req-list{list-style:none;margin:1.5rem 0;padding:0;border-top:1px solid var(--line);}
-  .req-list li{border-bottom:1px solid var(--line);padding:.9rem 0;display:flex;gap:1rem;}
-  .req-list b{min-width:13rem;flex-shrink:0;}
-  .req-list span{color:var(--ink-soft);}
-
-  .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0;}
-  .case-grid div{background:var(--surface);border:1px solid var(--line);padding:1.2rem;}
-  .case-grid h3{margin:0 0 .4rem;font-size:1rem;}
-  .case-grid p{margin:0;color:var(--ink-soft);font-size:.9rem;}
-
-  .faq dt{font-weight:600;margin-top:1.3rem;}
-  .faq dd{margin:.3rem 0 0;color:var(--ink-soft);}
-
-  footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-soft);font-size:.85rem;}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;max-width:960px;}
-  footer a{color:var(--ink-soft);text-decoration:none;margin-right:1rem;}
-  @media (max-width:680px){.req-list li{flex-direction:column;gap:.2rem;} .case-grid{grid-template-columns:1fr;}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://plantillafacturacion.es/factura-rectificativa.html">
 </head>
@@ -62,18 +17,24 @@
 
 <header>
   <div class="nav">
-    <a href="index.html" class="brand" style="text-decoration:none">Plantilla<span>Factura</span></a>
-    <nav><a href="index.html">Inicio</a><a href="blog/index.html">Blog</a>
-      <a href="contacto.html">Contacto</a></nav>
+    <a href="index.html" class="brand">Plantilla<span>Factura</span></a>
+    <nav>
+      <a href="plantilla-factura-autonomos.html" aria-current="page">Modelos</a>
+      <a href="calculadora-iva-irpf.html">Calculadora</a>
+      <a href="blog/index.html">Guías</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </div>
 </header>
 
 <article class="wrap">
+  <p class="crumbs"><a href="index.html">Inicio</a><span>/</span><a href="plantilla-factura-autonomos.html">Modelos</a><span>/</span>Factura rectificativa</p>
+  <p class="kicker">Modelo de referencia</p>
   <h1>Plantilla de factura rectificativa en Excel y PDF</h1>
   <p class="lede">El modelo que necesitas cuando tienes que anular o corregir una factura ya emitida, sin borrar el número original ni romper tu numeración correlativa.</p>
 
   <div class="download-box">
-    <p>Formato Excel (.xlsx) con fórmulas activas, y formato PDF listo para imprimir o enviar por correo.</p>
+    <p><strong>Modelo de referencia.</strong> Disponible en Excel (.xlsx) y en PDF para imprimir o enviar.</p>
     <div class="btn-row">
       <a href="descargas/Plantilla-Factura-Rectificativa.xlsx" class="btn" download>Descargar en Excel</a>
       <a href="descargas/Plantilla-Factura-Rectificativa.pdf" class="btn alt" download>Descargar en PDF</a>
@@ -115,8 +76,8 @@
   <h2>Cómo se refleja en el IVA</h2>
   <p>La factura rectificativa ajusta la declaración de IVA del periodo en que se emite, no la del periodo de la factura original. Si el importe rectificado es negativo (una devolución, por ejemplo), reduce la base imponible y la cuota de IVA a declarar; si es positivo, la aumenta.</p>
 
+  <h2>Preguntas frecuentes</h2>
   <dl class="faq">
-    <h2>Preguntas frecuentes</h2>
     <dt>¿Puedo simplemente borrar la factura con el error y hacer otra?</dt>
     <dd>No. Una vez emitida, una factura no se puede eliminar ni reutilizar su número. Siempre se corrige con una rectificativa.</dd>
     <dt>¿La numeración de las rectificativas va junto a las facturas normales?</dt>
@@ -124,12 +85,21 @@
     <dt>¿Tengo que avisar al cliente?</dt>
     <dd>Sí, la rectificativa se le envía igual que una factura normal, ya que sustituye o corrige lo que ya recibió.</dd>
   </dl>
+
+  <p class="note"><strong>Modelo orientativo.</strong> Esta plantilla es un punto de partida y no sustituye el asesoramiento de un gestor. Adáptala a tu actividad y a tu situación fiscal.</p>
+
+  <section class="related">
+    <h2>Para seguir leyendo</h2>
+    <div class="related-grid"><a href="blog/factura-rectificativa-cuando-emitirla.html">Factura rectificativa: cuándo y cómo<small>Guía con ejemplo real</small></a><a href="blog/errores-comunes-facturar-sanciones.html">8 errores al facturar<small>Cómo evitar sanciones</small></a><a href="plantilla-factura-autonomos.html">Factura de autónomo<small>Modelo en estimación directa</small></a></div>
+  </section>
 </article>
 
 <footer>
   <div class="wrap">
     <div>© 2026 PlantillaFactura</div>
-    <div><a href="sobre-nosotros.html">Sobre nosotros</a><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="contacto.html">Contacto</a></div>
+    <div>
+      <a href="index.html">Inicio</a><a href="sobre-nosotros.html">Sobre nosotros</a><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="contacto.html">Contacto</a>
+    </div>
   </div>
 </footer>
 
