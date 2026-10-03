@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Consentimiento de cookies (Google Consent Mode v2) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'wait_for_update': 500
+});
+try {
+  var pfc = JSON.parse(localStorage.getItem('pf-cookies') || 'null');
+  if (pfc && pfc.v === 'granted' && Date.now() - pfc.t < 31536000000) {
+    gtag('consent', 'update', {'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted'});
+  }
+} catch (e) {}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5WBCPSVK');</script>
+<!-- End Google Tag Manager -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745430115772287" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +39,10 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WBCPSVK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header>
   <div class="nav">
     <a href="index.html" class="brand">Plantilla<span>Factura</span></a>
@@ -34,7 +63,7 @@
   <p>Este sitio no requiere registro ni recoge datos personales directamente para el uso de las plantillas. Si nos escribes por correo electrónico, tratamos únicamente los datos que nos facilites (nombre y correo electrónico) para responder a tu consulta.</p>
   <h2>Publicidad y cookies de terceros</h2>
   <p>Este sitio utiliza Google AdSense para mostrar publicidad. Google y sus socios publicitarios pueden usar cookies para mostrar anuncios en función de tus visitas a este y otros sitios web. Puedes consultar cómo Google usa esta información y gestionar tus preferencias de anuncios en la configuración de anuncios de Google.</p>
-  <p>La primera vez que visitas el sitio aparece un aviso para que aceptes o rechaces las cookies de publicidad. Tu elección se guarda en tu navegador y puedes cambiarla en cualquier momento desde el enlace «Cookies» del pie de página. Si rechazas, se solicitarán anuncios no personalizados. Cuando esté disponible, también se podrá gestionar el consentimiento mediante la herramienta de Google (Privacidad y mensajes).</p>
+  <p>La gestión del consentimiento se realiza mediante la herramienta de Google (Privacidad y mensajes), desde la que puedes cambiar tu decisión en cualquier momento.</p>
   <ul>
     <li>Cookies propias: necesarias para el funcionamiento básico del sitio.</li>
     <li>Cookies de terceros (Google AdSense): para mostrar publicidad y medir su rendimiento.</li>
