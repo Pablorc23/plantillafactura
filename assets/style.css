@@ -226,3 +226,15 @@ footer a:hover{color:var(--gold);}
   .cat-list,.why-grid,.guide-grid{grid-template-columns:1fr;}
   .req-list li{flex-direction:column;gap:.2rem;}
   .nav nav a{margin:0 1.1rem
+
+/* Aviso de cookies */
+#cookie-banner{
+  position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:1000;max-width:640px;margin:0 auto;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:1.1rem 1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.2rem;
+  font-size:.9rem;
+}
+#cookie-banner p{margin:0;flex:1 1 280px;color:var(--ink-soft);line-height:1.5;}
+#cookie-banner a{color:var(--accent);text-decoration:underline;}
+#cookie-banner .cookie-actions{display:flex;gap:.6rem;}
+#cookie-banner .btn{padding:.55rem 1.15rem;font-size:.88rem;cursor:pointer;font-family:inherit;}
