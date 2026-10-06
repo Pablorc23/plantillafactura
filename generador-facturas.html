@@ -32,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Generador de facturas online para autónomos (gratis) | PlantillaFactura</title>
 <meta name="description" content="Crea tu factura online: elige el modelo, rellena tus datos y descárgala en PDF con el IVA y la retención de IRPF calculados al instante. Gratis y sin registro.">
 <link rel="canonical" href="https://plantillafacturacion.es/generador-facturas.html">
-<style>.gen{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:start}.gen fieldset{border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.2rem;margin:0 0 1rem}.gen legend{font-weight:600;padding:0 .4rem}.gen label{display:block;font-size:.88rem;margin:.55rem 0 .15rem}.gen input,.gen select,.gen textarea{width:100%;box-sizing:border-box;padding:.5rem .6rem;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff}.row{display:grid;grid-template-columns:1fr 70px 90px 34px;gap:.4rem;align-items:center;margin:.3rem 0}.row button{border:0;background:none;cursor:pointer;font-size:1.1rem}#preview{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;position:sticky;top:1rem;font-size:.9rem}#preview h3{margin:.2rem 0 .8rem}#preview table{width:100%;border-collapse:collapse;margin:.8rem 0}#preview th,#preview td{padding:.35rem .4rem;border-bottom:1px solid var(--line);text-align:left}#preview .n{text-align:right}#preview .tot{font-weight:700;font-size:1.05rem}.gen-btns{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}@media(max-width:860px){.gen{grid-template-columns:1fr}#preview{position:static}}@media print{body>*:not(main){display:none!important}.gen>form,.gen-btns,.gen-intro,.note,#cookie-banner{display:none!important}.gen{display:block}#preview{border:0;padding:0;position:static}}</style>
+<style>.gen{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:start}.gen fieldset{border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.2rem;margin:0 0 1rem}.gen legend{font-weight:600;padding:0 .4rem}.gen label{display:block;font-size:.88rem;margin:.55rem 0 .15rem}.gen input,.gen select,.gen textarea{width:100%;box-sizing:border-box;padding:.5rem .6rem;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff}.row{display:grid;grid-template-columns:1fr 70px 90px 34px;gap:.4rem;align-items:center;margin:.3rem 0}.row button{border:0;background:none;cursor:pointer;font-size:1.1rem}.gen>section{position:sticky;top:1rem}#preview{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;font-size:.9rem;max-height:calc(100vh - 9rem);overflow:auto}#preview h3{margin:.2rem 0 .8rem}#preview table{width:100%;border-collapse:collapse;margin:.8rem 0}#preview th,#preview td{padding:.35rem .4rem;border-bottom:1px solid var(--line);text-align:left}#preview .n{text-align:right}#preview .tot{font-weight:700;font-size:1.05rem}.gen-btns{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}@media(max-width:860px){.gen{grid-template-columns:1fr}.gen>section{position:static}#preview{max-height:none;overflow:visible}}@media print{body>*:not(main){display:none!important}.gen>form,.gen-btns,.gen-intro,.note,#cookie-banner{display:none!important}.gen{display:block}.gen>section{position:static}#preview{border:0;padding:0;max-height:none;overflow:visible}}</style>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:title" content="Generador de facturas online para autónomos">
 <meta property="og:type" content="website">
@@ -113,6 +113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="index.html" class="brand">Plantilla<span>Factura</span></a>
     <nav>
       <a href="plantilla-factura-autonomos.html">Modelos</a>
+      <a href="generador-facturas.html">Generador</a>
       <a href="calculadora-iva-irpf.html">Calculadora</a>
       <a href="blog/index.html">Guías</a>
       <a href="contacto.html">Contacto</a>
@@ -146,9 +147,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </fieldset>
     </form>
     <section>
+      <div class="gen-btns" style="margin:0 0 .8rem"><button class="btn" id="pdf" type="button">Descargar en PDF</button><span class="meta gen-intro" style="align-self:center">Elige «Guardar como PDF» en el diálogo de impresión.</span></div>
       <div id="preview" aria-live="polite"></div>
-      <div class="gen-btns"><button class="btn" id="pdf" type="button">Descargar en PDF</button></div>
-      <p class="meta gen-intro">El botón abre el diálogo de impresión: elige «Guardar como PDF» como destino.</p>
     </section>
   </div>
   <p class="note"><strong>Importante.</strong> Es una herramienta de ayuda: comprueba el modelo, los tipos de IVA y la retención aplicables a tu caso, y consulta con un gestor ante dudas. Más información en las guías de <a href="blog/iva-irpf-facturas-autonomos.html">IVA e IRPF</a> y <a href="blog/como-hacer-una-factura-autonomo.html">cómo hacer una factura</a>.</p>
