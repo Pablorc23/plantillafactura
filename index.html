@@ -26,53 +26,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NHGXVHJD');</script>
 <!-- End Google Tag Manager -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745430115772287"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745430115772287" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PlantillaFactura — Guía de facturación para autónomos en España</title>
-<meta name="description" content="Guía informativa sobre facturación para autónomos en España: datos obligatorios, IVA, IRPF, numeración y modelos de factura de referencia en Excel y PDF.">
+<title>Generador de facturas online para autónomos (gratis) | PlantillaFactura</title>
+<meta name="description" content="Crea tu factura online: elige el modelo, rellena tus datos y descárgala en PDF con el IVA y la retención de IRPF calculados al instante. Gratis y sin registro.">
+<link rel="canonical" href="https://www.plantillafacturacion.es/generador-facturas.html">
+<style>
+.gen{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:2rem;align-items:start;margin:1.5rem 0 2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.3rem 1.3rem;margin:0 0 1rem}
+.card h2{font-size:1rem;margin:0 0 .6rem;font-family:inherit;font-weight:700}
+.gen label{display:block;font-size:.84rem;font-weight:600;margin:.7rem 0 .25rem}
+.gen input,.gen select,.gen textarea{width:100%;box-sizing:border-box;padding:.65rem .75rem;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+.gen input:focus,.gen select:focus,.gen textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}.pills{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.pills button{padding:.6rem .5rem;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit;font-size:.88rem;cursor:pointer;color:var(--ink)}
+.pills button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.row{display:grid;grid-template-columns:1fr 62px 88px 30px;gap:.4rem;margin:.35rem 0}.row button{border:0;background:none;font-size:1.2rem;cursor:pointer;color:var(--ink-soft)}
+.add{margin-top:.5rem;background:none;border:1px dashed var(--accent);color:var(--accent);border-radius:10px;padding:.55rem;width:100%;font:inherit;cursor:pointer}
+.out{position:sticky;top:1rem}#bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--ink);color:#fff;border-radius:14px;padding:.8rem 1rem;margin-bottom:1rem}
+#bar small{display:block;opacity:.75;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}#bar strong{font-family:"Fraunces",serif;font-size:1.5rem}
+.pdf{background:var(--gold);color:#16222e;border:0;border-radius:999px;padding:.7rem 1.2rem;font:inherit;font-weight:700;cursor:pointer}
+#sheet{background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow);padding:2rem 2rem 1.4rem;font-size:.86rem;line-height:1.45;max-height:calc(100vh - 8.5rem);overflow:auto}
+.top{display:flex;justify-content:space-between;gap:1rem;border-bottom:3px solid var(--accent);padding-bottom:.8rem;margin-bottom:1rem}
+.ft{font-family:"Fraunces",serif;font-size:1.7rem;font-weight:600;color:var(--accent);line-height:1}.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1rem}
+.cols b,.mut{color:var(--ink-soft);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;display:block}
+#sheet table{width:100%;border-collapse:collapse;margin:.6rem 0}#sheet th{background:var(--accent);color:#fff;text-align:left;padding:.4rem .5rem;font-size:.78rem}
+#sheet td{padding:.4rem .5rem;border-bottom:1px solid var(--line)}#sheet .n{text-align:right}.sum{margin-left:auto;width:min(260px,100%)}
+.sum div{display:flex;justify-content:space-between;padding:.25rem 0}.sum .t{border-top:2px solid var(--ink);margin-top:.3rem;padding-top:.5rem;font-weight:700;font-size:1.05rem}
+.nt{margin-top:.8rem;font-size:.8rem;color:var(--ink-soft)}
+@media(max-width:860px){.gen{grid-template-columns:1fr}.out{position:static}#bar{position:fixed;left:.6rem;right:.6rem;bottom:.6rem;z-index:50;margin:0;box-shadow:0 8px 24px rgba(0,0,0,.3)}#sheet{max-height:none;padding:1.2rem}main{padding-bottom:5.5rem}.cols{grid-template-columns:1fr}}
+@page{size:A4;margin:14mm}
+@media print{body>*:not(main){display:none!important}main>*:not(.gen){display:none!important}.gen>form,#bar{display:none!important}.gen{display:block;margin:0}.out{position:static}#sheet{box-shadow:none;border:0;padding:0;max-height:none;overflow:visible;font-size:11pt}main{padding:0}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="Generador de facturas online para autónomos">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.plantillafacturacion.es/generador-facturas.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://plantillafacturacion.es/">
-<meta property="og:title" content="PlantillaFactura — Guía de facturación para autónomos">
-<meta property="og:description" content="Cómo es una factura correcta en España: datos obligatorios, IVA, IRPF y modelos de referencia.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://plantillafacturacion.es/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "PlantillaFactura",
-  "url": "https://plantillafacturacion.es/",
-  "description": "Guía informativa sobre facturación para autónomos en España, con modelos de factura de referencia en Excel y PDF."
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "PlantillaFactura",
-  "url": "https://plantillafacturacion.es/",
-  "logo": "https://plantillafacturacion.es/favicon.svg"
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generador de facturas para autónomos","url":"https://www.plantillafacturacion.es/generador-facturas.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
 <link rel="stylesheet" href="assets/style.css">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHGXVHJD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <header>
   <div class="nav">
     <a href="index.html" class="brand">Plantilla<span>Factura</span></a>
     <nav>
       <a href="plantilla-factura-autonomos.html">Modelos</a>
-      <a href="generador-facturas.html">Generador</a>
+      <a href="generador-facturas.html" aria-current="page">Generador</a>
       <a href="calculadora-iva-irpf.html">Calculadora</a>
       <a href="blog/index.html">Guías</a>
       <a href="contacto.html">Contacto</a>
@@ -80,131 +87,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<div class="hero wrap">
-  <div class="hero-grid">
-    <div>
-      <p class="kicker">Guía de facturación · España</p>
-      <h1>Plantillas de factura para autónomos y cómo hacerlas bien</h1>
-      <p>Qué datos exige la normativa, cómo se calculan el IVA y la retención de IRPF y qué modelo de factura corresponde a cada situación fiscal de un autónomo.</p>
-      <p><a class="btn" href="generador-facturas.html">Crear mi factura gratis →</a></p>
-      <div class="ledger-mark">
-        <div><strong>21%</strong><small>IVA general</small></div>
-        <div><strong>15% / 7%</strong><small>Retención de IRPF</small></div>
-        <div><strong>400 €</strong><small>Límite de la factura simplificada</small></div>
-      </div>
-    </div>
-
-    <aside class="sheet" aria-label="Ejemplo de cálculo de una factura">
-      <div class="sheet-head"><b>FACTURA</b><span>Nº 2026-014</span></div>
-      <div class="sheet-row"><span>Base imponible</span><span>600,00 €</span></div>
-      <div class="sheet-row"><span>IVA 21 %</span><span>+ 126,00 €</span></div>
-      <div class="sheet-row minus"><span>Retención IRPF 15 %</span><span>− 90,00 €</span></div>
-      <div class="sheet-total"><span>Total a cobrar</span><b>636,00 €</b></div>
-      <p class="sheet-note">Ejemplo con importes ficticios: total = base + IVA − retención.</p>
-    </aside>
-  </div>
+<main class="wrap">
+<p class="kicker">Herramienta gratuita</p>
+<h1>Generador de facturas online para autónomos</h1>
+<p class="intro" style="max-width:62ch;color:var(--ink-soft)">Elige el modelo, rellena tus datos y mira cómo se calcula la factura mientras escribes. Después, descárgala en PDF. Todo ocurre en tu navegador: no enviamos ni guardamos ningún dato.</p>
+<div class="gen">
+<form id="f" onsubmit="return false"><div class="card"><h2>Modelo de factura</h2><div class="pills"><button type="button" data-m="directa" aria-pressed="true">Estimación directa</button><button type="button" data-m="modulos" aria-pressed="false">Módulos</button><button type="button" data-m="rectificativa" aria-pressed="false">Rectificativa</button><button type="button" data-m="intra" aria-pressed="false">Cliente de la UE</button></div></div><div class="card"><h2>Tus datos</h2><label for="en">Nombre o razón social</label><input id="en" placeholder="Ej.: Ana López Pérez" ><div class="two"><div><label for="enif">NIF</label><input id="enif" placeholder="" ></div><div><label for="ed">Dirección</label><input id="ed" placeholder="" ></div></div></div><div class="card"><h2>Cliente</h2><label for="cn">Nombre o razón social</label><input id="cn" placeholder="" ><div class="two"><div><label for="cnif">NIF / NIF-IVA</label><input id="cnif" placeholder="" ></div><div><label for="cd">Dirección</label><input id="cd" placeholder="" ></div></div></div><div class="card"><h2>Datos de la factura</h2><div class="two"><div><label for="num">Número</label><input id="num" placeholder="" value="2026-001"></div><div><label for="fecha">Fecha</label><input id="fecha" placeholder="" type="date"></div></div><div id="rect" hidden><label for="orig">Factura que se rectifica</label><input id="orig" placeholder="F-2026-031 del 10/09/2026" ><label for="motivo">Motivo de la rectificación</label><input id="motivo" placeholder="Error en el tipo de IVA aplicado" ></div><label for="pago">Forma de pago o notas (opcional)</label><textarea id="pago" rows="2" placeholder="Ej.: Transferencia a ES00 0000 0000 0000 0000 0000, a 30 días"></textarea></div><div class="card"><h2>Conceptos</h2><div id="lines"></div><button type="button" class="add" id="add">+ Añadir concepto</button><div class="two"><div><label for="iva">IVA</label><select id="iva"><option value="0.21">21 %</option><option value="0.10">10 %</option><option value="0.04">4 %</option><option value="0">0 %</option></select></div><div id="retw"><label for="ret">Retención de IRPF</label><select id="ret"><option value="0">Sin retención</option><option value="0.15">15 %</option><option value="0.07">7 % (inicio)</option></select></div></div><p class="meta" style="margin:.6rem 0 0">La retención solo se aplica si el cliente es empresa o profesional.</p></div></form>
+<section class="out"><div id="bar"><div><small>Total a cobrar</small><strong id="tot">0,00 €</strong></div><button class="pdf" id="pdf" type="button">Descargar PDF</button></div><div id="sheet" aria-live="polite"></div><p class="meta" style="margin:.6rem 0 0">El botón abre la ventana de impresión: elige «Guardar como PDF» como destino.</p></section>
 </div>
-
-<section class="why wrap">
-  <p class="kicker">Antes de facturar</p>
-  <h2>Tres conceptos que conviene tener claros</h2>
-  <p class="section-intro">La mayoría de los errores al facturar vienen de tres puntos. Cada uno tiene su guía con ejemplos y la referencia normativa.</p>
-  <div class="why-grid">
-    <div>
-      <div class="num">1</div>
-      <h3>Datos obligatorios</h3>
-      <p>Emisor, destinatario, número, fecha, descripción, base imponible, tipo de IVA y total. Sin ellos, la factura puede no valer como justificante fiscal. <a href="blog/como-hacer-una-factura-autonomo.html">Ver la lista completa</a>.</p>
-    </div>
-    <div>
-      <div class="num">2</div>
-      <h3>IVA e IRPF</h3>
-      <p>El IVA se añade al precio; la retención de IRPF se resta, y solo cuando el cliente es una empresa o un profesional. <a href="blog/iva-irpf-facturas-autonomos.html">Ver tipos y ejemplos</a>.</p>
-    </div>
-    <div>
-      <div class="num">3</div>
-      <h3>Numeración correlativa</h3>
-      <p>Cada serie debe numerarse sin saltos ni repeticiones. Una factura errónea no se borra: se corrige con una rectificativa. <a href="blog/factura-rectificativa-cuando-emitirla.html">Ver cómo hacerlo</a>.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cats wrap">
-  <p class="kicker">Modelos de referencia</p>
-  <h2>Qué modelo de factura corresponde a cada situación</h2>
-  <p class="section-intro">Según el régimen fiscal y el tipo de operación cambian los datos que deben aparecer. Cada página explica la normativa aplicable y ofrece un modelo de referencia en Excel y PDF.</p>
-  <ul class="cat-list">
-    <li>
-      <a href="plantilla-factura-autonomos.html">Factura de autónomo en estimación directa</a>
-      <span class="desc">Con IVA y retención de IRPF. Es el caso más habitual entre profesionales.</span>
-    </li>
-    <li>
-      <a href="factura-modulos.html">Factura en régimen de módulos</a>
-      <span class="desc">Estimación objetiva: qué cambia respecto a la retención de IRPF.</span>
-    </li>
-    <li>
-      <a href="factura-rectificativa.html">Factura rectificativa</a>
-      <span class="desc">Cómo corregir o anular una factura ya emitida sin romper la numeración.</span>
-    </li>
-    <li>
-      <a href="factura-intracomunitaria.html">Factura intracomunitaria</a>
-      <span class="desc">Operaciones con clientes de la UE e inversión del sujeto pasivo.</span>
-    </li>
-    <li style="grid-column:1 / -1;">
-      <a href="generador-facturas.html">Generador de facturas online</a>
-      <span class="desc">Rellena tus datos, elige el modelo y descarga tu factura en PDF con IVA e IRPF calculados.</span>
-    </li>
-    <li style="grid-column:1 / -1;">
-      <a href="calculadora-iva-irpf.html">Calculadora de IVA e IRPF</a>
-      <span class="desc">Introduce una base imponible y comprueba el IVA, la retención y el total resultante.</span>
-    </li>
-  </ul>
-</section>
-
-<section class="guides wrap">
-  <div class="guides-head">
-    <div>
-      <p class="kicker">Biblioteca</p>
-      <h2>Guías sobre facturación y obligaciones</h2>
-    </div>
-    <a href="blog/index.html">Ver todas las guías →</a>
-  </div>
-  <div class="guide-grid">
-    <a class="guide-card" href="blog/como-hacer-una-factura-autonomo.html">
-      <span class="tag">Facturación</span>
-      <h3>Cómo hacer una factura siendo autónomo en 2026</h3>
-      <p>Campos obligatorios, numeración y cálculo de IVA e IRPF paso a paso.</p>
-    </a>
-    <a class="guide-card" href="blog/factura-electronica-obligatoria-verifactu.html">
-      <span class="tag">Normativa</span>
-      <h3>Factura electrónica y Verifactu: a quién afecta</h3>
-      <p>Qué exige la Ley Crea y Crece y desde cuándo, explicado sin tecnicismos.</p>
-    </a>
-    <a class="guide-card" href="blog/errores-comunes-facturar-sanciones.html">
-      <span class="tag">Prevención</span>
-      <h3>8 errores al facturar que pueden costar una sanción</h3>
-      <p>Los fallos más comunes y cómo evitarlos ante una comprobación.</p>
-    </a>
-    <a class="guide-card" href="blog/gastos-deducibles-autonomos.html">
-      <span class="tag">Impuestos</span>
-      <h3>Gastos deducibles para autónomos</h3>
-      <p>Qué se puede deducir, qué es polémico y qué requisitos exige Hacienda.</p>
-    </a>
-    <a class="guide-card" href="blog/modelo-130-131-pagos-fraccionados.html">
-      <span class="tag">Impuestos</span>
-      <h3>Modelo 130 y 131: pagos fraccionados del IRPF</h3>
-      <p>Quién debe presentarlos, plazos trimestrales y cómo se calculan.</p>
-    </a>
-    <a class="guide-card" href="blog/cobrar-facturas-impagadas-pasos.html">
-      <span class="tag">Cobros</span>
-      <h3>Cómo actuar ante una factura impagada</h3>
-      <p>Reclamación, intereses de demora y cuándo acudir a un procedimiento monitorio.</p>
-    </a>
-  </div>
-</section>
-
-<section class="wrap" style="padding-top:3rem;">
-  <p class="note"><strong>Sobre esta información.</strong> Los contenidos se basan en la normativa vigente, principalmente el Reglamento de facturación (Real Decreto 1619/2012), y tienen carácter divulgativo. Cada caso particular puede tener matices: ante una duda concreta, consulta con un gestor o con la Agencia Tributaria.</p>
-</section>
+<p class="note"><strong>Importante.</strong> Es una herramienta de ayuda: comprueba el modelo, los tipos de IVA y la retención aplicables a tu caso, y consulta con un gestor ante dudas. Más información en las guías de <a href="blog/iva-irpf-facturas-autonomos.html">IVA e IRPF</a> y <a href="blog/como-hacer-una-factura-autonomo.html">cómo hacer una factura</a>.</p>
+</main>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},M='directa',fmt=new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR'});
+function calc(l,i,r){var b=0;l.forEach(function(x){b+=x.q*x.p});var c=Math.round(b*i*100)/100,t=Math.round(b*r*100)/100;b=Math.round(b*100)/100;return{base:b,iva:c,ret:t,total:Math.round((b+c-t)*100)/100}}
+window.__calc=calc;
+function h(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
+function row(c,q,p){var d=h('div','row');d.innerHTML='<input class="c" placeholder="Concepto" aria-label="Concepto"><input class="q" type="number" step="any" aria-label="Cantidad"><input class="p" type="number" step="any" placeholder="Precio" aria-label="Precio">';var b=h('button','','×');b.type='button';b.title='Quitar';b.onclick=function(){d.remove();render()};d.appendChild(b);d.querySelector('.c').value=c||'';d.querySelector('.q').value=q||1;d.querySelector('.p').value=p||'';$('lines').appendChild(d)}
+function set(m){M=m;[].forEach.call(document.querySelectorAll('.pills button'),function(b){b.setAttribute('aria-pressed',b.dataset.m===m)});var n=$('num');if(n.value==='2026-001'||n.value==='R-2026-001')n.value=m==='rectificativa'?'R-2026-001':'2026-001';$('rect').hidden=m!=='rectificativa';$('retw').hidden=!(m==='directa'||m==='rectificativa');$('iva').disabled=m==='intra';if(m==='intra')$('iva').value='0';render()}
+function party(t,a){var d=h('div');d.appendChild(h('b','',t));d.appendChild(h('div','',a[0]||'—'));d.appendChild(h('div','',a.slice(1).filter(Boolean).join(' · ')));return d}
+function render(){
+var s=$('sheet');s.textContent='';var iva=parseFloat($('iva').value),ret=$('retw').hidden?0:parseFloat($('ret').value),r=M==='rectificativa';
+var ls=[].map.call($('lines').children,function(x){return{c:x.querySelector('.c').value,q:parseFloat(x.querySelector('.q').value)||0,p:parseFloat(x.querySelector('.p').value)||0}}),t=calc(ls,iva,ret);
+var top=h('div','top'),l=h('div');l.appendChild(h('div','ft',r?'Factura rectificativa':'Factura'));top.appendChild(l);
+var rt=h('div');rt.style.textAlign='right';rt.appendChild(h('div','','Nº '+($('num').value||'—')));rt.appendChild(h('div','mut',$('fecha').value.split('-').reverse().join('/')));top.appendChild(rt);s.appendChild(top);
+if(r){var q=h('p','nt','Rectifica la factura '+($('orig').value||'—')+'. Motivo: '+($('motivo').value||'—'));q.style.margin='0 0 1rem';s.appendChild(q)}
+var cols=h('div','cols');cols.appendChild(party('Emisor',[$('en').value,$('enif').value,$('ed').value]));cols.appendChild(party('Cliente',[$('cn').value,$('cnif').value,$('cd').value]));s.appendChild(cols);
+var tb=h('table'),hd=h('tr');['Concepto','Cant.','Precio','Importe'].forEach(function(x,i){hd.appendChild(h('th',i?'n':'',x))});tb.appendChild(hd);
+ls.forEach(function(x){var e=h('tr');e.appendChild(h('td','',x.c||'—'));e.appendChild(h('td','n',String(x.q)));e.appendChild(h('td','n',fmt.format(x.p)));e.appendChild(h('td','n',fmt.format(x.q*x.p)));tb.appendChild(e)});s.appendChild(tb);
+var sm=h('div','sum');function ln(a,b,c){var d=h('div',c);d.appendChild(h('span','',a));d.appendChild(h('span','',b));sm.appendChild(d)}
+ln(r?'Base rectificada':'Base imponible',fmt.format(t.base));ln('IVA '+Math.round(iva*100)+' %',fmt.format(t.iva));if(ret)ln('Retención IRPF '+Math.round(ret*100)+' %','− '+fmt.format(t.ret));ln(r?'Total rectificado':'Total a cobrar',fmt.format(t.total),'t');s.appendChild(sm);
+var nt=[];if(M==='intra')nt.push('Operación no sujeta a IVA en España por las reglas de localización (art. 69 Ley 37/1992). Inversión del sujeto pasivo.');if(M==='modulos')nt.push('Contribuyente en estimación objetiva (módulos).');if($('pago').value)nt.push($('pago').value);
+nt.forEach(function(x){s.appendChild(h('p','nt',x))});s.appendChild(h('p','nt','Factura generada con plantillafacturacion.es'));
+$('tot').textContent=fmt.format(t.total)}
+row('Servicio de diseño',1,1000);$('fecha').value=new Date().toISOString().slice(0,10);
+[].forEach.call(document.querySelectorAll('.pills button'),function(b){b.onclick=function(){set(b.dataset.m)}});
+$('f').addEventListener('input',render);$('f').addEventListener('change',render);$('add').onclick=function(){row();render()};
+$('pdf').onclick=function(){var t=document.title;document.title='Factura '+($('num').value||'');window.print();setTimeout(function(){document.title=t},800)};
+set('directa')})();
+</script>
 
 <footer>
   <div class="wrap">
