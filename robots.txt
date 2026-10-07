@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://plantillafacturacion.es/sitemap.xml
+Sitemap: https://www.plantillafacturacion.es/sitemap.xml
