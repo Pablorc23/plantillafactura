@@ -38,23 +38,30 @@
     hide();
   }
 
-  function show() {
-    if (banner || !document.body) return;
+  function show(fromLink) {
+    if (!document.body) return;
+    if (banner) { var b0 = document.getElementById('cookie-accept'); if (b0) b0.focus(); return; }
+    var cur = read();
     banner = document.createElement('div');
     banner.id = 'cookie-banner';
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-label', 'Aviso de cookies');
     banner.innerHTML =
-      '<p>Usamos cookies propias y de terceros (Google) para el funcionamiento de la web, medir el tráfico y, ' +
+      '<p>' + (fromLink && cur ? '<strong>Tu elección actual: cookies ' + (cur === 'granted' ? 'aceptadas' : 'rechazadas') + '.</strong> Puedes cambiarla ahora. ' : '') +
+      'Usamos cookies propias y de terceros (Google) para el funcionamiento de la web, medir el tráfico y, ' +
       'si lo aceptas, mostrar publicidad personalizada. Más información en nuestra ' +
       '<a href="/politica-privacidad.html">política de privacidad y cookies</a>.</p>' +
       '<div class="cookie-actions">' +
       '<button type="button" class="btn" id="cookie-accept">Aceptar</button>' +
       '<button type="button" class="btn alt" id="cookie-reject">Rechazar</button>' +
+      (fromLink ? '<button type="button" class="btn alt" id="cookie-close">Cerrar</button>' : '') +
       '</div>';
     document.body.appendChild(banner);
     document.getElementById('cookie-accept').addEventListener('click', function () { choose('granted'); });
     document.getElementById('cookie-reject').addEventListener('click', function () { choose('denied'); });
+    var cl = document.getElementById('cookie-close');
+    if (cl) cl.addEventListener('click', hide);
+    document.getElementById('cookie-accept').focus();
   }
 
   function addFooterLink() {
@@ -64,13 +71,13 @@
     a.href = '#';
     a.id = 'cookie-settings';
     a.textContent = 'Configurar cookies';
-    a.addEventListener('click', function (e) { e.preventDefault(); show(); });
+    a.addEventListener('click', function (e) { e.preventDefault(); show(true); });
     box.appendChild(a);
   }
 
   function init() {
     var c = read();
-    if (c === null) show(); else update(c);
+    if (c === null) show(false); else update(c);
     addFooterLink();
   }
 
